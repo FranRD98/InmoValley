@@ -70,8 +70,8 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  display: block; /* IMPORTANTE: no usar display:none para CSS transition */
-  position: absolute; /* para que se posicione correctamente */
+  display: block;
+  position: absolute;
   z-index: 1000;
   background-color: var(--color-background-dark);
 }
@@ -350,8 +350,8 @@ header {
 .select2-container--default.select2-container--open .select2-selection--multiple::after {
   transform: translateY(-50%) rotate(180deg); /* rota la flecha al abrir */
 }
-
-.search-form input {
+.search-form input[type='text'],
+.search-form input[type='number'] {
   min-height: 54px;
   padding: 8px 10px;
   border-radius: 0px;
@@ -450,6 +450,22 @@ header {
 }
 .btn-advanced img {
   padding-right: 8px;
+}
+
+/* Campos avanzados ocultos por defecto */
+.advanced-fields {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+/* Cuando el checkbox oculto está activado → mostrar */
+#toggle-advanced:checked ~ .advanced-fields {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
 }
 /* ===================== FUTURE SECTION ===================== */
 
@@ -716,9 +732,9 @@ header {
 }
 
 #featured-properties .info-propiedad .caracteristicas {
-  display: flex; /* pone los elementos en fila */
-  gap: 15px; /* espacio entre cada li */
-  flex-wrap: wrap; /* opcional, si quieres que baje a la siguiente línea en pantallas pequeñas */
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
   justify-content: end;
   font-size: 15px;
   font-weight: 400;
@@ -910,33 +926,38 @@ header {
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  width: 18px;
-  height: 18px;
+  width: 34px;
+  height: 34px;
 
   border-radius: 50%;
-  border: 2px solid var(--color-white);
+  border: 1px solid var(--color-primary);
   background-color: transparent;
 
   cursor: pointer;
   position: relative;
   margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox-round:hover {
+  background-color: var(--color-primary);
 }
 
 .checkbox-round:checked {
-  background-color: var(--color-white);
-  border-color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
-/* Marca interior: un círculo más pequeño */
 .checkbox-round:checked::after {
   content: '';
   position: absolute;
-  top: 4px; /* centrado */
-  left: 4px;
-  width: 8px;
-  height: 8px;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-primary);
   border-radius: 50%;
-  background: var(--color-primary); /* color del “tick” */
+  transform: translate(-50%, -50%);
 }
 
 /* Evitar efecto de focus de Bootstrap */

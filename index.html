@@ -317,17 +317,37 @@
                   Buscar
                 </button>
               </div>
+
+              <!-- Checkbox oculto para activar campos avanzados -->
+              <input type="checkbox" id="toggle-advanced" hidden />
+
+              <!-- ======================= CAMPOS AVANZADOS ======================= -->
+              <div class="mt-3 advanced-fields">
+                <div class="row gx-2">
+                  <div class="col">
+                    <input type="number" class="form-control search-input" placeholder="Precio desde" name="price_from" />
+                  </div>
+                  <div class="col">
+                    <input type="number" class="form-control search-input" placeholder="Baños" name="bathrooms" />
+                  </div>
+                  <div class="col d-flex align-items-center">
+                    <input type="checkbox" id="pool" name="pool" class="checkbox-round" />
+                    <label for="pool" class="ms-2">Piscina</label>
+                  </div>
+                </div>
+              </div>
             </form>
 
-            <!-- BOTONES DE ABAJO -->
-            <div class="p-0 mt-3 row gx-0">
-              <div class="col-6 col-md-3 d-grid">
-                <button type="button" class="btn-clear-filters"><img src="assets/eraser.svg" alt="" /> Limpiar Filtros</button>
-              </div>
+            <!-- ======================= BOTONES INFERIORES ======================= -->
 
-              <div class="col-6 col-md-3 d-grid">
-                <button type="button" class="btn-advanced"><img src="assets/icon-advanced-search-2.svg" alt="" /> Búsqueda Avanzada</button>
-              </div>
+            <!-- Botón LIMPIAR -->
+            <div class="p-0 mt-3 col-6 col-md-3 d-grid">
+              <button type="reset" class="btn-clear-filters"><img src="assets/eraser.svg" alt="" /> Limpiar Filtros</button>
+            </div>
+
+            <!-- Botón BÚSQUEDA AVANZADA -->
+            <div class="p-0 mt-3 col-6 col-md-3 d-grid">
+              <label for="toggle-advanced" class="btn-advanced"> <img src="assets/icon-advanced-search-2.svg" alt="" /> Búsqueda Avanzada </label>
             </div>
           </div>
         </div>
