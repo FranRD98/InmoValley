@@ -210,9 +210,31 @@
               <!-- TIPO -->
               <div class="col">
                 <select name="ty[]" id="ty" class="form-select select2" multiple data-placeholder="Tipo">
-                  <option value="4">Alquiler a largo plazo</option>
-                  <option value="2">Nueva construcción</option>
-                  <option value="1">Venta</option>
+                  <option value="4">Adosado</option>
+                  <option value="2">Apartamento</option>
+                  <option value="1">Ático</option>
+                  <option value="1">Casa</option>
+                  <option value="1">Casa con terreno</option>
+                  <option value="1">Casa de Pueblo</option>
+                  <option value="1">Chalet</option>
+                  <option value="1">Despacho</option>
+                  <option value="1">Duplex</option>
+                  <option value="1">Entresuelo</option>
+                  <option value="1">Finca rústica</option>
+                  <option value="1">Garaje</option>
+                  <option value="1">Inmueble singular</option>
+                  <option value="1">Local comercial</option>
+                  <option value="1">Nave industrial</option>
+                  <option value="1">Oficina</option>
+                  <option value="1">Parcela</option>
+                  <option value="1">Parking</option>
+                  <option value="1">Piso</option>
+                  <option value="1">Planta baja</option>
+                  <option value="1">Solar</option>
+                  <option value="1">Terreno industrial</option>
+                  <option value="1">Terreno rural</option>
+                  <option value="1">Terreno urbanizable</option>
+                  <option value="1">Terreno urbano</option>
                 </select>
               </div>
 
@@ -228,28 +250,65 @@
               <!-- ZONA -->
               <div class="col">
                 <select name="zo[]" id="zo" class="form-select select2" multiple data-placeholder="Zona">
-                  <option value="4">Alquiler a largo plazo</option>
-                  <option value="2">Nueva construcción</option>
+                  <option value="4">Alcala del Jucar</option>
+                  <option value="2">Alicante</option>
+                  <option value="1">Arenales del sol</option>
+                  <option value="1">Aspe</option>
+                  <option value="1">Crevillent</option>
+                  <option value="1">Elche</option>
+                  <option value="1">Elche pedanias</option>
+                  <option value="1">La hoya</option>
+                  <option value="1">Murcia</option>
+                  <option value="1">Orihuela</option>
+                  <option value="1">Peña las aguilas</option>
+                  <option value="1">Perleta</option>
                   <option value="1">Venta</option>
+                  <option value="1">Santa Pola</option>
+                  <option value="1">Torrellano</option>
+                  <option value="1">Porcelanosa</option>
+                  <option value="1">Raval - Puertas Coloradas</option>
+                  <option value="1">Santa Maria de Gracia</option>
+                  <option value="1">Santa pola del este</option>
+                  <option value="1">Sector Quinto</option>
+                  <option value="1">TORRELLANO</option>
+                  <option value="1">Toscar</option>
+                  <option value="1">Tres Hermanas</option>
+                  <option value="1">Valverde</option>
+                  <option value="1">xLas bayas</option>
                 </select>
               </div>
 
               <!-- PRECIO HASTA -->
               <div class="col">
                 <select name="pr[]" id="pr" class="form-select select2" multiple data-placeholder="Precio hasta">
-                  <option value="4">Alquiler a largo plazo</option>
-                  <option value="2">Nueva construcción</option>
-                  <option value="1">Venta</option>
+                  <option value="" selected="">Precio hasta</option>
+                  <option value="25000">25000 €</option>
+                  <option value="50000">50000 €</option>
+                  <option value="75000">75000 €</option>
+                  <option value="100000">100000 €</option>
+                  <option value="125000">125000 €</option>
+                  <option value="150000">150000 €</option>
+                  <option value="175000">175000 €</option>
+                  <option value="200000">200000 €</option>
+                  <option value="225000">225000 €</option>
+                  <option value="250000">250000 €</option>
+                  <option value="275000">275000 €</option>
+                  <option value="300000">300000 €</option>
+                  <option value="350000">350000 €</option>
+                  <option value="400000">400000 €</option>
+                  <option value="450000">450000 €</option>
+                  <option value="500000">500000 €</option>
+                  <option value="550000">550000 €</option>
+                  <option value="600000">600000 €</option>
+                  <option value="650000">650000 €</option>
+                  <option value="700000">700000 €</option>
+                  <option value="1000000">+1000000 €</option>
                 </select>
               </div>
 
               <!-- REFERENCIA -->
               <div class="col">
-                <select name="re[]" id="re" class="form-select select2" multiple data-placeholder="Referencia">
-                  <option value="4">Alquiler a largo plazo</option>
-                  <option value="2">Nueva construcción</option>
-                  <option value="1">Venta</option>
-                </select>
+                <input type="text" name="re" id="re" class="form-control search-input" placeholder="Referencia" />
               </div>
 
               <div class="col-6 col-lg-2 d-grid">
@@ -263,13 +322,11 @@
             <!-- BOTONES DE ABAJO -->
             <div class="p-0 mt-3 row gx-0">
               <div class="col-6 col-md-3 d-grid">
-                <button type="button" class="btn btn-secondary btn-clear-filters"><img src="assets/eraser.svg" alt="" /> Limpiar Filtros</button>
+                <button type="button" class="btn-clear-filters"><img src="assets/eraser.svg" alt="" /> Limpiar Filtros</button>
               </div>
 
               <div class="col-6 col-md-3 d-grid">
-                <button type="button" class="btn btn-secondary btn-advanced">
-                  <img src="assets/advanced search.svg" alt="" /> Búsqueda Avanzada
-                </button>
+                <button type="button" class="btn-advanced"><img src="assets/icon-advanced-search-2.svg" alt="" /> Búsqueda Avanzada</button>
               </div>
             </div>
           </div>

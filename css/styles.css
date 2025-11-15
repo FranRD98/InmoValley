@@ -308,6 +308,56 @@ header {
 }
 
 /* ===================== SEARCH FORM ===================== */
+#search-form {
+  padding-bottom: 60px;
+}
+
+/* Placeholder en cursiva */
+#search-form textarea.select2-search__field::placeholder {
+  font-style: italic !important;
+}
+
+/* Placeholder del input referencia */
+#search-form input::placeholder {
+  font-style: italic !important;
+  color: #6d6d6d;
+  text-transform: none;
+}
+
+/* Añadir caret/flecha a la derecha del select */
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--single {
+  position: relative;
+}
+
+.select2-container--default .select2-selection--single::after,
+.select2-container--default .select2-selection--multiple::after {
+  content: ''; /* podemos poner la flecha con border */
+  position: absolute;
+  top: 50%;
+  right: 10px; /* margen desde la derecha */
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333; /* color de la flecha */
+}
+
+/* Ajuste si quieres que la flecha sea más visible */
+.select2-container--default.select2-container--open .select2-selection--single::after,
+.select2-container--default.select2-container--open .select2-selection--multiple::after {
+  transform: translateY(-50%) rotate(180deg); /* rota la flecha al abrir */
+}
+
+.search-form input {
+  min-height: 54px;
+  padding: 8px 10px;
+  border-radius: 0px;
+  border: 1px solid #ccc;
+  font-style: italic !important;
+}
 
 /* Input de texto */
 .search-form .select2-container .select2-selection--multiple {
@@ -315,6 +365,7 @@ header {
   padding: 8px 10px;
   border-radius: 0px;
   border: 1px solid #ccc;
+  font-style: italic !important;
 }
 
 /* Input de texto */
@@ -323,6 +374,7 @@ header {
   padding: 8px 10px;
   border-radius: 0px;
   border: 1px solid #ccc;
+  font-style: italic !important;
 }
 
 /* Color del texto de las opciones */
@@ -371,10 +423,11 @@ header {
   border: 1px solid #333;
   border-radius: 0px;
   font-weight: 700;
+  color: var(--color-white);
 }
 
 .btn-clear-filters img {
-  margin-right: 8px;
+  padding-right: 8px;
 }
 
 .btn-advanced {
@@ -389,10 +442,14 @@ header {
   border: 1px solid #978510;
   border-radius: 0px;
   font-weight: 700;
+  color: var(--color-white);
 }
 
+.btn-advanced:hover {
+  background-color: #a79734;
+}
 .btn-advanced img {
-  margin-right: 8px;
+  padding-right: 8px;
 }
 /* ===================== FUTURE SECTION ===================== */
 
