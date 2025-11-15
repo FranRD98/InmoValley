@@ -1,0 +1,710 @@
+:root {
+  --color-primary: #978510;
+  --color-primary-hover: #ffc107;
+  --color-background-dark: #181d24;
+  --color-white: #fff;
+  --font-main: 'Montserrat', sans-serif;
+  --font-secondary: 'Caveat', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-background-dark);
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+a:hover {
+  color: currentColor;
+}
+
+a.active {
+  background-color: var(--color-primary);
+  padding: 2px 10px;
+  text-transform: uppercase;
+}
+
+/* === HEADER === */
+.main-menu {
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main-menu li a {
+  margin-right: 8px;
+}
+
+.main-menu li a {
+  margin: 0px 2px;
+}
+
+/* Label de detalle encima del menu de navegación */
+.detail {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Separación vertical entre elementos del menu */
+.header-block nav {
+  margin-top: 10px;
+}
+
+/* Fondo del menú desplegable */
+.idiomas-dropdown .dropdown-menu {
+  background-color: var(--color-background-dark);
+  border: none; /* Opcional, quita borde por defecto */
+  min-width: auto; /* Ajusta el ancho si quieres */
+}
+
+/* Color del texto de los items */
+.idiomas-dropdown .dropdown-item {
+  color: var(--color-white);
+  background-color: var(--color-background-dark);
+}
+
+/* Hover en items */
+.idiomas-dropdown .dropdown-item:hover {
+  border-left: 5.5px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Tamaño de la bandera */
+.idiomas-dropdown img {
+  height: 20px;
+}
+
+/* ========== SIDEBAR ========== */
+#menu-lateral {
+  background-color: var(--color-background-dark);
+  width: 60vw;
+}
+
+.sidebar-menu {
+  margin-bottom: 50px;
+}
+.sidebar-menu li a {
+  color: var(--color-white);
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.sidebar-menu li a:hover {
+  color: var(--color-primary);
+}
+
+#menu-lateral > .container {
+  margin-top: 5vh;
+  margin-left: 15vw;
+}
+
+.offcanvas-body {
+  font-size: 19px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.custom-close {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-family: var(--font-secondary);
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === SLIDER - SEARCH === */
+/* Imagen de fondo */
+.slider-image {
+  background: url('../assets/slider.jpg') center/cover no-repeat;
+  height: 75vh;
+  filter: brightness(0.7);
+}
+
+.slider-content {
+  margin-top: -30vh;
+  position: relative;
+  z-index: 2;
+}
+
+/* Textos */
+.slider-title {
+  font-size: 182px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.slider-subtitle {
+  font-size: 72px;
+  font-weight: 400;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* Buscador */
+.buscador {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.search-option {
+  padding: 0;
+}
+
+.btn-search {
+  background-color: var(--color-primary);
+  color: white;
+}
+/* Caja completa donde escribes y se ven las etiquetas */
+.select2-container--default.select2-container {
+  width: 100% !important; /* Ancho completo de la columna */
+  border: 0px; /* Borde de la caja */
+  border-radius: 0; /* Sin redondeo */
+  padding: 0;
+}
+
+/* Área donde se escriben las búsquedas (textarea dentro) */
+.select2-container--default .select2-search__field {
+  font-style: italic;
+  font-size: 14px;
+  color: #000;
+  padding: 5px 0; /* Ajusta altura del input */
+}
+
+/* Placeholder (texto gris antes de escribir) */
+.select2-container--default .select2-selection__placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Cada "etiqueta" que se añade al seleccionar */
+.select2-container--default .select2-selection__choice {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  padding: 2px 5px;
+  margin: 2px 2px 2px 0; /* Ajusta separación entre etiquetas */
+}
+
+/* Dropdown que aparece al escribir */
+.select2-container--default .select2-dropdown {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Opciones dentro del dropdown */
+.select2-container--default .select2-results__option {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #212529;
+}
+
+/* Opción seleccionada al pasar el ratón */
+.select2-container--default .select2-results__option--highlighted {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* ========== FUTURE SECTION ========== */
+
+#future-section {
+  background: url('../assets/banner-01-home.jpg') center/cover no-repeat;
+  position: relative;
+  padding-top: 160px; /* espacio para el título */
+  padding-bottom: 120px; /* espacio para las cards */
+}
+
+/* Título encima del fondo */
+.future-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.future-title .title {
+  font-size: 92px;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+}
+
+/* Icono centrado */
+.future-icon {
+  text-align: center;
+  margin-bottom: 60px; /* separa del grid */
+}
+
+#future-section a.mini-card {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color: #181d24;
+  height: 320px;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+#future-section a.mini-card .card-title {
+  color: #ffcb00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 50px solid #ffcb00;
+  display: inline-block;
+  line-height: 1.3;
+  min-height: 115px;
+  z-index: 2;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 26px 30px 0;
+}
+
+#future-section a.mini-card .card-total {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-left: 50px solid #666;
+  color: #fff;
+  padding: 26px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+#future-section a.mini-card .card-total strong {
+  font-size: 66px;
+  font-weight: 300;
+  padding-right: 20px;
+}
+
+/* ========== PROPIEDADES DEL MES ========= */
+#featured-properties .title {
+  font-size: 60px; /* tamaño del título */
+  font-weight: 300;
+  color: var(--color-white); /* color por defecto */
+  text-align: center; /* opcional */
+  text-transform: uppercase;
+  line-height: 0.7;
+  padding: 48px 0px;
+}
+
+#property-offer .title .highlight {
+  color: var(--color-primary);
+  text-transform: none;
+  line-height: 0.7;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+}
+
+/* ========== PROPIEDADES DESTACADAS ========= */
+#featured-properties {
+  background-color: var(--color-background-dark);
+  padding: 100px 0px;
+}
+
+#featured-properties .title {
+  font-size: 60px; /* tamaño del título */
+  font-weight: 300;
+  color: var(--color-white); /* color por defecto */
+  text-align: center; /* opcional */
+  text-transform: uppercase;
+  line-height: 0.7;
+  padding: 48px 0px;
+}
+
+#featured-properties .title .highlight {
+  color: var(--color-primary);
+  text-transform: none;
+  line-height: 0.7;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+}
+
+.propiedad-destacada {
+  overflow: hidden;
+}
+
+.propiedad-destacada:hover {
+  background-color: var(--color-primary);
+}
+
+.propiedad-destacada:hover .info-propiedad {
+  color: var(--color-background-dark);
+}
+
+.propiedad-destacada:hover .info-propiedad .price {
+  color: var(--color-white);
+}
+
+/* Contenedor de la imagen para poder posicionar elementos encima */
+.imagen-propiedad {
+  position: relative;
+}
+
+/* Icono de favoritos arriba a la derecha */
+.icono-favorito {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Texto REF abajo a la derecha sobre la imagen */
+.ref-propiedad {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: #3c4146;
+  padding: 12px 5px;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: 2px;
+}
+
+.info-propiedad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.info-propiedad .info-border {
+  border-right: 1px solid #6f6f6f;
+  padding-right: 25px;
+  height: 50%;
+}
+
+/* Imagen ajustable */
+.imagen-propiedad img {
+  width: 100%;
+  display: block;
+}
+
+.info-propiedad .type {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.info-propiedad .modality {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.info-propiedad .location {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.info-propiedad .price {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-primary);
+  letter-spacing: 1.8px;
+}
+
+.info-propiedad .caracteristicas {
+  display: flex; /* pone los elementos en fila */
+  gap: 15px; /* espacio entre cada li */
+  flex-wrap: wrap; /* opcional, si quieres que baje a la siguiente línea en pantallas pequeñas */
+  justify-content: end;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 0.7;
+}
+
+.info-propiedad .caracteristicas strong {
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.info-propiedad .caracteristicas li {
+  display: flex;
+  align-items: center;
+}
+
+.all-properties a:hover p {
+  color: white;
+}
+
+.all-properties p {
+  color: var(--color-primary);
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+.all-properties img {
+  margin-left: 10px;
+}
+
+/* ======= SOBRE NOSOTROS ======= */
+#sobre-nosotros {
+  padding-bottom: 140px;
+}
+/* Texto ligeramente desplazado hacia la derecha */
+#sobre-nosotros .texto-central {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  position: relative;
+  left: 20px;
+}
+
+/* Tipografías */
+#sobre-nosotros .titulo {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+#sobre-nosotros p {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+#sobre-nosotros .btn-outline-primary {
+  padding: 12px 48px;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: 700;
+  border: 1.5px solid var(--color-primary);
+}
+
+#sobre-nosotros .btn-outline-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Imágenes estilo "recortadas" */
+.object-fit-cover {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* La imagen derecha NO se ve completa: se recorta */
+.imagen-derecha {
+  overflow: hidden;
+}
+
+/* ======= ULTIMAS NOTICIAS ======= */
+#last-news {
+  background-color: var(--color-white);
+  color: var(--color-background-dark);
+  padding: 120px 0px;
+}
+
+#last-news .vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 87px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 0.7;
+}
+
+#last-news .vertical-text strong {
+  font-family: var(--font-secondary);
+  text-transform: none;
+  color: var(--color-primary);
+}
+
+#last-news .card {
+  padding: 0 12px;
+  border: none;
+}
+
+#last-news .image img {
+  width: 100%;
+}
+
+#last-news .text {
+  padding: 10px 20px;
+  position: absolute;
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ===================== SECTION BLOCK ===================== */
+#block-section {
+  height: 70vh;
+  background: url('../assets/final_background.jpg') center/cover no-repeat;
+}
+
+/* ===================== CONTACT FORM ===================== */
+#contact-form {
+  background-color: var(--color-primary);
+}
+
+#contact-form .contact-title {
+  font-size: 60px; /* tamaño del título */
+  font-weight: 300;
+  color: black; /* color por defecto */
+  line-height: 42px; /* ajusta la separación entre líneas */
+  text-align: center; /* opcional */
+  text-transform: uppercase;
+}
+
+#contact-form .contact-title .highlight {
+  color: var(--color-white);
+  font-family: var(--font-secondary);
+  text-transform: none;
+}
+
+#contact-form .form-control {
+  color: var(--color-white) !important;
+}
+
+.form-control::placeholder {
+  color: var(--color-white);
+  opacity: 1;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  border-color: #000; /* color del borde al hacer focus */
+  box-shadow: none; /* eliminar el brillo azul de Bootstrap */
+  outline: none; /* quitar contorno */
+}
+
+#contact-form input {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+#contact-form textarea {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+/* Hacer el checkbox redondo */
+/* Ocultamos estilos nativos del checkbox */
+.checkbox-round {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%; /* borde redondo */
+  border: 2px solid var(--color-white); /* color del borde */
+  background-color: transparent;
+
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+}
+
+/* Efecto al marcar */
+.checkbox-round:checked {
+  background-color: var(--color-white); /* fondo del círculo */
+  border-color: var(--color-white);
+}
+
+/* Marca interior: un círculo más pequeño */
+.checkbox-round:checked::after {
+  content: '';
+  position: absolute;
+  top: 4px; /* centrado */
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary); /* color del “tick” */
+}
+
+/* Evitar efecto de focus de Bootstrap */
+.checkbox-round:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ===================== FOOTER VERTICAL ===================== */
+#footer-vertical {
+  background-color: var(--color-background-dark);
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+#footer-vertical .details {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+}
+
+#footer-vertical .details:hover {
+  color: var(--color-primary-hover);
+}
+
+#footer-vertical .bottom-menu {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-vertical .bottom-menu li {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#footer-vertical .bottom-menu a {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#footer-vertical .bottom-menu a:hover {
+  background-color: var(--color-primary);
+}
+
+/* ===================== FOOTER ===================== */
+#footer-legal {
+  background-color: var(--color-primary);
+  padding: 25px 0px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#footer-legal a:hover {
+  color: var(--color-primary-hover);
+}

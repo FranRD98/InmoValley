@@ -1,13 +1,770 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio | InmoValley</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/icon logo.svg" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Google Fonts Montserrat y Caveat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet" />
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- jQuery (obligatorio) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Tu JS -->
     <script src="js/scripts.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="py-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Menú izquierdo -->
+          <div class="col-4 d-flex flex-column justify-content-between px-2 header-block">
+            <a href="tel:34966274206" class="detail">966 274 206</a>
+
+            <nav>
+              <ul class="main-menu list-unstyled d-flex">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Propiedades</a></li>
+                <li><a href="#">Vender</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Logo centrado -->
+          <div class="col-4 d-flex justify-content-center align-items-center px-3">
+            <a href="#">
+              <img src="assets/logo_header.svg" alt="Inmovalley Inmobiliaria" class="img-fluid" />
+            </a>
+          </div>
+
+          <!-- Menú derecho -->
+          <div class="col-4 d-flex flex-column justify-content-between align-items-end px-2 header-block">
+            <!-- Contenedor horizontal para correo y dropdown -->
+            <div class="d-flex align-items-center">
+              <a href="mailto:info@inmovalley.com" class="detail me-3">info@inmovalley.com</a>
+
+              <div class="dropdown idiomas-dropdown">
+                <a class="dropdown-toggle pe-3" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/es_flag.svg" alt="Español" />
+                </a>
+                <ul class="dropdown-menu pe-3" aria-labelledby="langDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#"><img src="assets/eng_flag.svg" alt="EN" /> English</a>
+                  </li>
+                </ul>
+              </div>
+
+              <a href="https://www.facebook.com/inmovalleynew" target="_blank" class="facebook-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+
+            <nav>
+              <ul class="main-menu list-unstyled d-flex">
+                <li><a href="#">Valora tu propiedad</a></li>
+                <li><a href="#">Contactar</a></li>
+                <li>
+                  <a href="#"><img src="assets/icon_heart_fill.svg" alt="Favoritos" class="favoritos-icon" /></a>
+                </li>
+                <li>
+                  <a class="btn-menu" data-bs-toggle="offcanvas" href="#menu-lateral" role="button">
+                    <img src="assets/menu.svg" alt="Menu" class="me-2" /> Menú
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menu-lateral">
+      <div class="container">
+        <!-- FILA 1: Menú principal + botón cerrar -->
+        <div class="row g-0 mb-3 position-relative">
+          <!-- Menú principal -->
+          <div class="col-9 offcanvas-body">
+            <ul class="list-unstyled sidebar-menu mb-0">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Empresa</a></li>
+              <li><a href="#">Propiedades</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Vender</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contactar</a></li>
+            </ul>
+
+            <a href="#"><img src="assets/icon_heart_fill.svg" alt="Favoritos" class="favoritos-icon" /></a>
+          </div>
+
+          <!-- Botón cerrar -->
+          <div class="col-3 position-relative">
+            <button
+              type="button"
+              class="custom-close position-absolute bottom-0"
+              data-bs-dismiss="offcanvas"
+              aria-label="Cerrar"
+              style="left: 0; transform: translate(-35px, 0)"
+            >
+              <img src="/assets/Icon feather-plus-circle.svg" alt="Cerrar" />
+              <span>Cerrar</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- FILA 2: Mini menú horizontal + dropdown idiomas -->
+        <div class="row g-0">
+          <div class="col-12 d-flex flex-column offcanvas-body">
+            <!-- Mini menú horizontal -->
+            <ul class="list-unstyled d-flex gap-3 mb-0">
+              <li><a href="#">966 274 206</a></li>
+              <li><a href="#">info@inmovalley.com</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+
+            <!-- Dropdown idiomas -->
+            <div class="dropdown idiomas-dropdown">
+              <a class="dropdown-toggle pe-3" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/es_flag.svg" alt="Español" />
+              </a>
+              <ul class="dropdown-menu pe-3" aria-labelledby="langDropdown">
+                <li>
+                  <a class="dropdown-item" href="#"><img src="assets/eng_flag.svg" alt="EN" /> English</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="hero-section">
+      <!-- Imagen de fondo -->
+      <div class="slider-image"></div>
+
+      <div class="container">
+        <div class="row align-items-end slider-content">
+          <!-- Columna izquierda -->
+          <div class="col-md-6 col-lg-7 d-flex flex-column align-items-end p-0">
+            <span class="slider-title">
+              <span>Inmo</span>
+              <span>Valley</span>
+            </span>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="col-md-6 col-lg-5 d-flex flex-column p-0">
+            <p class="slider-subtitle">Siempre a tu lado</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buscador -->
+      <div class="buscador">
+        <div class="container">
+          <form action="/propiedades/" method="get" id="searchHomeForm" class="row g-3">
+            <div class="container">
+              <div class="row g-3 align-items-center">
+                <!-- Estado -->
+                <div class="col-md-3 col-6 search-option">
+                  <select id="st" name="st[]" class="form-select select2" multiple="multiple" data-placeholder="Estado">
+                    <option value="4">Alquiler a largo plazo</option>
+                    <option value="2">Nueva construcción</option>
+                    <option value="1">Venta</option>
+                  </select>
+                </div>
+
+                <!-- Tipo -->
+                <div class="col-md-3 col-6 search-option">
+                  <select id="tp" name="tp[]" class="form-select select2" multiple="multiple" data-placeholder="Tipo">
+                    <option value="1">Adosado</option>
+                    <option value="38">Apartamento</option>
+                    <option value="3">Ático</option>
+                  </select>
+                </div>
+
+                <!-- Población -->
+                <div class="col-md-3 col-6 search-option">
+                  <select id="loct" name="loct[]" class="form-select select2" multiple="multiple" data-placeholder="Población">
+                    <option value="30">Alcala del Jucar</option>
+                    <option value="18">Alicante</option>
+                    <option value="7">Arenales del sol</option>
+                  </select>
+                </div>
+
+                <!-- Botón Buscar -->
+                <div class="col-md-3 col-6 d-grid search-option">
+                  <button type="submit" class="btn-search">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="future-section">
+      <!-- 1. Título -->
+      <div class="future-title">
+        <p class="title">Elige tu futuro</p>
+      </div>
+
+      <!-- 2. Icono -->
+      <div class="future-icon">
+        <img src="assets/icon logo.svg" alt="InmoValley" />
+      </div>
+
+      <!-- 3. Cards en su propio bloque -->
+      <div class="future-cards">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <a href="#" class="mini-card">
+                <span class="card-title">
+                  Pisos en Elche
+                  <img src="assets/arrow-right.svg" />
+                </span>
+                <span class="card-total"><strong>11</strong> Propiedades</span>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="#" class="mini-card">
+                <span class="card-title">
+                  Chalets en Elche
+                  <img src="assets/arrow-right.svg" />
+                </span>
+                <span class="card-total"><strong>7</strong> Propiedades</span>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="#" class="mini-card">
+                <span class="card-title">
+                  Apartamentos Santa Pola
+                  <img src="assets/arrow-right.svg" />
+                </span>
+                <span class="card-total"><strong>1</strong> Propiedades</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="property-offer" class="py-5 position-relative">
+      <div class="container">
+        <!-- Título -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-12 text-center">
+            <h2 class="title">
+              Propiedad<br />
+              <span class="highlight">Del mes</span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Propiedad destacada -->
+        <div class="row justify-content-center position-relative">
+          <!-- Imagen de fondo -->
+          <div class="col-md-8">
+            <img src="assets/piso-venta-elche-porcelanosa_26801_lgX.jpg" class="img-fluid w-100" alt="Piso - Venta - Elche - Porcelanosa" />
+          </div>
+
+          <!-- Card superpuesta -->
+          <div class="col-md-4 card-featured position-absolute top-50 end-0 translate-middle-y shadow-lg bg-white p-4">
+            <a href="/propiedad/793/piso/venta/espana/alicante/elche/porcelanosa/" class="text-decoration-none text-dark d-flex flex-wrap">
+              <!-- Información izquierda -->
+              <div class="col-md-6 d-flex flex-column justify-content-center">
+                <div class="badge badge-gray mb-2"><strong>REF: P-1182</strong></div>
+                <h3>Piso <span>Venta</span></h3>
+                <h4>Elche <small>·</small> Porcelanosa</h4>
+                <ul class="d-flex gap-3 flex-wrap list-unstyled mt-3 mb-0">
+                  <li><strong>120</strong> m²</li>
+                  <li><strong>3</strong> Habitaciones</li>
+                  <li><strong>2</strong> Baños</li>
+                  <li><strong>Piscina</strong></li>
+                  <li><strong>Garaje</strong></li>
+                </ul>
+                <div class="prices fw-bold fs-4 mt-3">285.000 €</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPIEDADES DESTACADAS -->
+    <section id="featured-properties">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center mb-4">
+            <h2 class="title">
+              Propiedades<br />
+              <span class="highlight">Destacadas</span><br />
+            </h2>
+          </div>
+
+          <!-- Propiedad 1 -->
+          <div class="col-md-6 mb-4">
+            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+              <!-- Imagen de la propiedad con contenedor relativo -->
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/chalet-venta-perleta-maitino-perleta_24801_md.jpg" class="img-fluid" />
+
+                <!-- Icono favoritos arriba a la derecha -->
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+
+                <!-- Texto REF abajo a la derecha -->
+                <div class="ref-propiedad position-absolute">REF: CH-267</div>
+              </div>
+
+              <!-- Información -->
+              <div class="info-propiedad row">
+                <div class="col-md-6">
+                  <div class="info-border">
+                    <p class="type">Chalet</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Perleta · Maitino-Perleta</p>
+                  </div>
+                  <p class="price">525.000 €</p>
+                </div>
+                <div class="col-md-6">
+                  <ul class="caracteristicas">
+                    <li><strong>450</strong> m²</li>
+                    <li><strong>3.014</strong> m²</li>
+                    <li><strong>5</strong> Hab</li>
+                    <li><strong>3</strong> Baños</li>
+                    <li><strong>Piscina</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Propiedad 2 -->
+          <div class="col-md-6 mb-4">
+            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+              <!-- Imagen de la propiedad con contenedor relativo -->
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/piso-venta-elche-centro_25573_md.jpg" class="img-fluid" />
+
+                <!-- Icono favoritos arriba a la derecha -->
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+
+                <!-- Texto REF abajo a la derecha -->
+                <div class="ref-propiedad position-absolute">REF: P-1429</div>
+              </div>
+
+              <!-- Información -->
+              <div class="info-propiedad row">
+                <div class="col-md-6">
+                  <div class="info-border">
+                    <p class="type">Piso</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Elche · Centro</p>
+                  </div>
+                  <p class="price">269.999 €</p>
+                </div>
+                <div class="col-md-6">
+                  <ul class="caracteristicas">
+                    <li><strong>222</strong> m²</li>
+                    <li><strong>4</strong> Hab</li>
+                    <li><strong>Garaje</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Propiedad 3 -->
+          <div class="col-md-6 mb-4">
+            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+              <!-- Imagen de la propiedad con contenedor relativo -->
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/chalet-venta-elche-pedanias-perleta_26754_md.jpg" class="img-fluid" />
+
+                <!-- Icono favoritos arriba a la derecha -->
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+
+                <!-- Texto REF abajo a la derecha -->
+                <div class="ref-propiedad position-absolute">REF: CH-272</div>
+              </div>
+
+              <!-- Información -->
+              <div class="info-propiedad row">
+                <div class="col-md-6">
+                  <div class="info-border">
+                    <p class="type">Chalet</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Elche Pedanias · Perleta</p>
+                  </div>
+                  <p class="price">599.000 €</p>
+                </div>
+                <div class="col-md-6">
+                  <ul class="caracteristicas">
+                    <li><strong>436</strong> m²</li>
+                    <li><strong>4500</strong> m²</li>
+                    <li><strong>6</strong> Hab</li>
+                    <li><strong>4</strong> Baños</li>
+                    <li><strong>Piscina</strong></li>
+                    <li><strong>Garaje</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Propiedad 4 -->
+          <div class="col-md-6 mb-4">
+            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+              <!-- Imagen de la propiedad con contenedor relativo -->
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/piso-venta-elche-centro_26573_md.jpg" class="img-fluid" />
+
+                <!-- Icono favoritos arriba a la derecha -->
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+
+                <!-- Texto REF abajo a la derecha -->
+                <div class="ref-propiedad position-absolute">REF: P-223</div>
+              </div>
+
+              <!-- Información -->
+              <div class="info-propiedad row">
+                <div class="col-md-6">
+                  <div class="info-border">
+                    <p class="type">Piso</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Elche · Centro</p>
+                  </div>
+                  <p class="price">320.000 €</p>
+                </div>
+                <div class="col-md-6">
+                  <ul class="caracteristicas">
+                    <li><strong>140</strong> m²</li>
+                    <li><strong>4</strong> Hab</li>
+                    <li><strong>2</strong> Baños</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ver todas las propiedades -->
+        <div class="container">
+          <div class="all-properties d-flex justify-content-center align-items-center mt-5 mb-5">
+            <a href="#" class="d-flex align-items-center text-decoration-none text-white">
+              <p class="mb-0 me-3">Ver todas las <br />propiedades</p>
+              <img src="assets/Icon feather-plus-circle.svg" class="img-fluid" alt="Más propiedades" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre-nosotros" class="py-5">
+      <div class="container-fluid px-0 overflow-hidden">
+        <div class="row g-0">
+          <!-- Imagen izquierda -->
+          <div class="col-xl-4 col-lg-5 d-none d-lg-block">
+            <img src="assets/home-text-img-01.jpg" class="img-fluid w-100 h-100 object-fit-cover" />
+          </div>
+
+          <!-- Texto centrado pero desplazado -->
+          <div class="col-xl-4 col-lg-6 col-md-10 offset-lg-1 px-3 px-md-4 px-lg-5 texto-central">
+            <div class="icono mb-4">
+              <img src="assets/icon_2.svg" class="img-fluid" />
+            </div>
+
+            <h1 class="titulo mb-4">
+              Bienvenido a nuestra Inmobiliaria. Inmovalley fue fundada en Elche en el año 2005, dedicada a la intermediación inmobiliaria, contando
+              sus componentes con más de veinte años de experiencia en el sector inmobiliario.
+            </h1>
+
+            <p>
+              Desde su apertura, con una primera oficina en la C/ Filet de Fora en Elche (Alicante), la empresa se ha volcado en la gestión de
+              compraventas y arrendamientos de inmuebles en Elche y sus alrededores. En estos años, la confianza de nuestros clientes así como la
+              profesionalidad de nuestros asesores ha ido creciendo constantemente.
+            </p>
+
+            <a href="/sobre-nosotros/" class="btn btn-outline-primary px-4 px-xl-5"> Más sobre nosotros </a>
+          </div>
+
+          <!-- Imagen derecha recortada -->
+          <div class="col-xl-2 offset-xl-1 col-md-2 d-none d-md-block imagen-derecha">
+            <img src="assets/home-text-img-02.jpg" class="img-fluid w-100 h-100 object-fit-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÚLTIMAS NOTICIAS -->
+    <section id="last-news">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-lg-start text-center align-items-end d-flex justify-content-center">
+            <div class="col-lg-1 pe-lg-0 col-xl-2 col-12 text-lg-start text-center align-items-end d-flex justify-content-center">
+              <div class="d-flex justify-content-center align-items-end">
+                <p class="vertical-text">
+                  Últimas<br />
+                  <strong>Noticias</strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-2 px-lg-5 px-xl-4 align-items-end d-flex justify-content-center justify-content-xl-start">
+              <img src="assets/Icon feather-plus-2-circle.svg" class="img-fluid" />
+            </div>
+
+            <div class="col-lg-9">
+              <div class="row">
+                <div class="col-md-6 card">
+                  <div class="image">
+                    <img src="assets/last-news_1.jpg" class="img-fluid" alt="Last News 1" />
+                  </div>
+
+                  <div class="text">
+                    <p class="date">27 jun 2025</p>
+                    <p class="title">
+                      ¿Cuánto te cuesta poner tu inmueble a un precio por encima del mercado? Te lo decimos con datos, no con suposiciones
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 card">
+                  <div class="image">
+                    <img src="assets/last-news_2.jpg" alt="Last News 2" />
+                  </div>
+
+                  <div class="text">
+                    <p class="date">27 jun 2025</p>
+                    <p class="title">Cómo Vender Tu Inmueble sin Intermediarios y Evitar las Llamadas de Agencias.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION -->
+    <section id="block-section"></section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact-form" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-12 d-flex flex-column align-items-center text-center">
+            <!-- Título en varias líneas -->
+            <h2 class="contact-title">
+              Contacta<br />
+              <span class="highlight">Con</span><br />
+              Nosotros
+            </h2>
+
+            <!-- Formulario -->
+            <form class="w-100 mt-4" novalidate>
+              <!-- Nombre completo (ancho completo) -->
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Tu Nombre*" required />
+              </div>
+
+              <!-- Teléfono y Email (50/50) -->
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <input type="tel" class="form-control" placeholder="Tu Teléfono" />
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Tu Correo electrónico*" required />
+                </div>
+              </div>
+
+              <!-- Mensaje -->
+              <div class="mb-3">
+                <textarea class="form-control" rows="5" placeholder="Mensaje*" required></textarea>
+              </div>
+
+              <!-- Política de privacidad -->
+              <div class="form-check mb-3 text-start">
+                <input class="checkbox-round" type="checkbox" id="privacyPolicy" required />
+
+                <label class="form-check-label" for="privacyPolicy">
+                  <span>
+                    Marque la casilla para contactarnos y acepte que su información se use de acuerdo con nuestra
+                    <a href="/privacidad/" target="_blank">Política de privacidad</a> que se agregará automáticamente a nuestra lista de correo, pero
+                    puede cancelarla en cualquier momento*
+                  </span>
+                </label>
+              </div>
+
+              <!-- Captcha falso -->
+              <div class="mb-3 d-flex justify-content-center">
+                <img src="assets/captcha.jpeg" alt="Captcha" class="w-25" />
+              </div>
+
+              <!-- Botón enviar -->
+              <div class="mb-2 text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+
+              <!-- Texto responsable del tratamiento -->
+              <small class="d-block text-muted text-center">
+                Responsable del tratamiento: Nombre de la empresa. Los datos se utilizarán únicamente para responder a su consulta.
+              </small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER VERTICAL -->
+    <section id="footer-vertical">
+      <div class="container d-flex flex-column align-items-center">
+        <!-- Logo -->
+        <div class="mb-5">
+          <img src="assets/logo_header.svg" alt="Logo InmoValley" class="img-fluid" />
+        </div>
+
+        <!-- Contacto -->
+        <div class="pb-4 pb-lg-5">
+          <a href="tel:+34966274206" class="details">966 274 206</a>
+          <a href="mailto:info@inmovalley.com" class="details">info@inmovalley.com</a>
+        </div>
+
+        <!-- Menú vertical -->
+        <div class="col-12 mb-4">
+          <ul class="bottom-menu mb-0 pl-0">
+            <li class="list-inline-item active">
+              <a href="/" class="active">Inicio</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://inmovalley.com/sobre-nosotros/">Empresa</a>
+            </li>
+
+            <li class="dropdown dropup list-inline-item">
+              <a
+                href="https://inmovalley.com/propiedades/"
+                role="button"
+                data-bs-toggle="dropdown"
+                id="dropdownMenuLink1ft"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Propiedades
+              </a>
+              <ul class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuLink1ft">
+                <li class="dropdown-item">
+                  <a href="https://inmovalley.com/propiedades/">Ver todas las propiedades</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="https://inmovalley.com/propiedades-alquiler-a-largo-plazo/">Alquiler a largo plazo</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="https://inmovalley.com/propiedades-nueva-construccion/">Nueva construcción</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="https://inmovalley.com/propiedades-venta/">Venta</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="/servicios/">Servicios</a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="/vender-su-propiedad/">Vender</a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="/noticias/">Blog</a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="/contacto/">Contactar</a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="#"><img src="assets/icon_heart_fill.svg" alt="Favoritos" class="favoritos-icon" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Idioma y Facebook -->
+        <div class="bottom-menu d-flex justify-content-center align-items-center">
+          <!-- Selector de idiomas -->
+          <div class="dropdown idiomas-dropdown">
+            <a class="dropdown-toggle" href="#" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/es_flag.svg" alt="Español" style="height: 20px" />
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="langDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="assets/eng_flag.svg" alt="EN" style="height: 20px" />
+                  English
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/inmovalleynew" target="_blank" class="facebook-link text-white fs-5">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER HORIZONTAL -->
+    <footer id="footer-legal">
+      <div class="container d-flex flex-md-row justify-content-center align-items-center">
+        <!-- Texto legal -->
+        <div class="col-md-8 text-md-center">
+          © 2025 INMOVALLEY ·
+          <a href="https://inmovalley.com/nota-legal/">Nota legal</a> ● <a href="https://inmovalley.com/privacidad/">Privacidad</a> ●
+          <a href="https://inmovalley.com/cookies/">Cookies</a> ●
+          <a href="https://inmovalley.com/mapa-del-sitio/">Mapa Web</a>
+        </div>
+
+        <!-- Crédito de diseño -->
+        <div class="col-md-4 text-md-center">
+          Diseño: <strong><a href="https://mediaelx.net/" target="_blank" class="text-uppercase">Mediaelx</a></strong>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
