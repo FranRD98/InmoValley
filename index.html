@@ -28,15 +28,20 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-    <!-- Tu JS -->
+    <!-- Javascript -->
     <script src="js/scripts.js"></script>
   </head>
   <body>
+    <!-- Badge 'Valorar tu propiedad' -->
+    <div class="badge-valora">
+      <a href="/valorar-propiedad/">Valora tu propiedad</a>
+    </div>
+
     <header class="py-3">
       <div class="container">
         <div class="row align-items-center">
           <!-- Menú izquierdo -->
-          <div class="col-4 d-flex flex-column justify-content-between px-2 header-block">
+          <div class="px-2 col-4 d-flex flex-column justify-content-between header-block">
             <a href="tel:34966274206" class="detail">966 274 206</a>
 
             <nav>
@@ -49,14 +54,14 @@
           </div>
 
           <!-- Logo centrado -->
-          <div class="col-4 d-flex justify-content-center align-items-center px-3">
+          <div class="px-3 col-4 d-flex justify-content-center align-items-center">
             <a href="#">
               <img src="assets/logo_header.svg" alt="Inmovalley Inmobiliaria" class="img-fluid" />
             </a>
           </div>
 
           <!-- Menú derecho -->
-          <div class="col-4 d-flex flex-column justify-content-between align-items-end px-2 header-block">
+          <div class="px-2 col-4 d-flex flex-column justify-content-between align-items-end header-block">
             <!-- Contenedor horizontal para correo y dropdown -->
             <div class="d-flex align-items-center">
               <a href="mailto:info@inmovalley.com" class="detail me-3">info@inmovalley.com</a>
@@ -97,13 +102,13 @@
     </header>
 
     <!-- SIDEBAR -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menu-lateral">
+    <div class="text-white offcanvas offcanvas-start bg-dark" tabindex="-1" id="menu-lateral">
       <div class="container">
         <!-- FILA 1: Menú principal + botón cerrar -->
-        <div class="row g-0 mb-3 position-relative">
+        <div class="mb-3 row g-0 position-relative">
           <!-- Menú principal -->
           <div class="col-9 offcanvas-body">
-            <ul class="list-unstyled sidebar-menu mb-0">
+            <ul class="mb-0 list-unstyled sidebar-menu">
               <li><a href="#">Inicio</a></li>
               <li><a href="#">Empresa</a></li>
               <li><a href="#">Propiedades</a></li>
@@ -120,7 +125,7 @@
           <div class="col-3 position-relative">
             <button
               type="button"
-              class="custom-close position-absolute bottom-0"
+              class="bottom-0 custom-close position-absolute"
               data-bs-dismiss="offcanvas"
               aria-label="Cerrar"
               style="left: 0; transform: translate(-35px, 0)"
@@ -135,7 +140,7 @@
         <div class="row g-0">
           <div class="col-12 d-flex flex-column offcanvas-body">
             <!-- Mini menú horizontal -->
-            <ul class="list-unstyled d-flex gap-3 mb-0">
+            <ul class="gap-3 mb-0 list-unstyled d-flex">
               <li><a href="#">966 274 206</a></li>
               <li><a href="#">info@inmovalley.com</a></li>
               <li><a href="#">Facebook</a></li>
@@ -157,67 +162,108 @@
       </div>
     </div>
 
-    <section id="hero-section">
+    <section id="hero">
       <!-- Imagen de fondo -->
       <div class="slider-image"></div>
 
-      <div class="container">
+      <div class="container hero-section">
         <div class="row align-items-end slider-content">
           <!-- Columna izquierda -->
-          <div class="col-md-6 col-lg-7 d-flex flex-column align-items-end p-0">
+          <div class="p-0 col-md-6 col-lg-7 d-flex flex-column align-items-end">
             <span class="slider-title">
               <span>Inmo</span>
               <span>Valley</span>
             </span>
+            <img src="assets/Icon feather-arrow-down-circle.svg" alt="Ir al buscador" class="hero-arrow" />
           </div>
 
           <!-- Columna derecha -->
-          <div class="col-md-6 col-lg-5 d-flex flex-column p-0">
+          <div class="p-0 col-md-6 col-lg-5 d-flex flex-column">
             <p class="slider-subtitle">Siempre a tu lado</p>
           </div>
         </div>
       </div>
 
       <!-- Buscador -->
-      <div class="buscador">
+      <div class="search-form">
         <div class="container">
-          <form action="/propiedades/" method="get" id="searchHomeForm" class="row g-3">
-            <div class="container">
-              <div class="row g-3 align-items-center">
-                <!-- Estado -->
-                <div class="col-md-3 col-6 search-option">
-                  <select id="st" name="st[]" class="form-select select2" multiple="multiple" data-placeholder="Estado">
-                    <option value="4">Alquiler a largo plazo</option>
-                    <option value="2">Nueva construcción</option>
-                    <option value="1">Venta</option>
-                  </select>
-                </div>
+          <div class="row">
+            <form action="" class="row gx-0 gy-0 align-items-end">
+              <!-- ESTADO -->
+              <div class="col">
+                <select name="st[]" id="st" class="form-select select2" multiple data-placeholder="Estado">
+                  <option value="4">Alquiler a largo plazo</option>
+                  <option value="2">Nueva construcción</option>
+                  <option value="1">Venta</option>
+                </select>
+              </div>
 
-                <!-- Tipo -->
-                <div class="col-md-3 col-6 search-option">
-                  <select id="tp" name="tp[]" class="form-select select2" multiple="multiple" data-placeholder="Tipo">
-                    <option value="1">Adosado</option>
-                    <option value="38">Apartamento</option>
-                    <option value="3">Ático</option>
-                  </select>
-                </div>
+              <!-- TIPO -->
+              <div class="col">
+                <select name="ty[]" id="ty" class="form-select select2" multiple data-placeholder="Tipo">
+                  <option value="4">Alquiler a largo plazo</option>
+                  <option value="2">Nueva construcción</option>
+                  <option value="1">Venta</option>
+                </select>
+              </div>
 
-                <!-- Población -->
-                <div class="col-md-3 col-6 search-option">
-                  <select id="loct" name="loct[]" class="form-select select2" multiple="multiple" data-placeholder="Población">
-                    <option value="30">Alcala del Jucar</option>
-                    <option value="18">Alicante</option>
-                    <option value="7">Arenales del sol</option>
-                  </select>
-                </div>
+              <!-- POBLACIÓN -->
+              <div class="col">
+                <select name="po[]" id="po" class="form-select select2" multiple data-placeholder="Población">
+                  <option value="4">Alquiler a largo plazo</option>
+                  <option value="2">Nueva construcción</option>
+                  <option value="1">Venta</option>
+                </select>
+              </div>
 
-                <!-- Botón Buscar -->
-                <div class="col-md-3 col-6 d-grid search-option">
-                  <button type="submit" class="btn-search">Buscar</button>
-                </div>
+              <!-- ZONA -->
+              <div class="col">
+                <select name="zo[]" id="zo" class="form-select select2" multiple data-placeholder="Zona">
+                  <option value="4">Alquiler a largo plazo</option>
+                  <option value="2">Nueva construcción</option>
+                  <option value="1">Venta</option>
+                </select>
+              </div>
+
+              <!-- PRECIO HASTA -->
+              <div class="col">
+                <select name="pr[]" id="pr" class="form-select select2" multiple data-placeholder="Precio hasta">
+                  <option value="4">Alquiler a largo plazo</option>
+                  <option value="2">Nueva construcción</option>
+                  <option value="1">Venta</option>
+                </select>
+              </div>
+
+              <!-- REFERENCIA -->
+              <div class="col">
+                <select name="re[]" id="re" class="form-select select2" multiple data-placeholder="Referencia">
+                  <option value="4">Alquiler a largo plazo</option>
+                  <option value="2">Nueva construcción</option>
+                  <option value="1">Venta</option>
+                </select>
+              </div>
+
+              <div class="col-6 col-lg-2 d-grid">
+                <button type="submit" class="btn btn-secondary btn-search">
+                  <img src="assets/search.svg" alt="Buscar" />
+                  Buscar
+                </button>
+              </div>
+            </form>
+
+            <!-- BOTONES DE ABAJO -->
+            <div class="p-0 mt-3 row gx-0">
+              <div class="col-6 col-md-3 d-grid">
+                <button type="button" class="btn btn-secondary btn-clear-filters"><img src="assets/eraser.svg" alt="" /> Limpiar Filtros</button>
+              </div>
+
+              <div class="col-6 col-md-3 d-grid">
+                <button type="button" class="btn btn-secondary btn-advanced">
+                  <img src="assets/advanced search.svg" alt="" /> Búsqueda Avanzada
+                </button>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
@@ -274,8 +320,8 @@
     <section id="property-offer" class="py-5 position-relative">
       <div class="container">
         <!-- Título -->
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-12 text-center">
+        <div class="mb-4 row justify-content-center">
+          <div class="text-center col-md-12">
             <h2 class="title">
               Propiedad<br />
               <span class="highlight">Del mes</span>
@@ -291,21 +337,31 @@
           </div>
 
           <!-- Card superpuesta -->
-          <div class="col-md-4 card-featured position-absolute top-50 end-0 translate-middle-y shadow-lg bg-white p-4">
-            <a href="/propiedad/793/piso/venta/espana/alicante/elche/porcelanosa/" class="text-decoration-none text-dark d-flex flex-wrap">
+          <div class="p-4 col-md-4 card-featured position-absolute top-50 end-0 translate-middle-y">
+            <a href="/propiedad/793/piso/venta/espana/alicante/elche/porcelanosa/" class="flex-wrap text-decoration-none d-flex">
               <!-- Información izquierda -->
-              <div class="col-md-6 d-flex flex-column justify-content-center">
-                <div class="badge badge-gray mb-2"><strong>REF: P-1182</strong></div>
-                <h3>Piso <span>Venta</span></h3>
-                <h4>Elche <small>·</small> Porcelanosa</h4>
-                <ul class="d-flex gap-3 flex-wrap list-unstyled mt-3 mb-0">
-                  <li><strong>120</strong> m²</li>
-                  <li><strong>3</strong> Habitaciones</li>
-                  <li><strong>2</strong> Baños</li>
-                  <li><strong>Piscina</strong></li>
-                  <li><strong>Garaje</strong></li>
-                </ul>
-                <div class="prices fw-bold fs-4 mt-3">285.000 €</div>
+              <div class="info-propiedad row">
+                <div class="col-md-12 d-flex justify-content-between">
+                  <div class="ref-propiedad-ofertada">REF: CH-267</div>
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+
+                <div class="col-md-12">
+                  <div class="pt-4 info-border">
+                    <p class="type">Chalet</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Perleta · Maitino-Perleta</p>
+
+                    <ul class="caracteristicas">
+                      <li><strong>450</strong> m²</li>
+                      <li><strong>3.014</strong> m²</li>
+                      <li><strong>5</strong> Hab</li>
+                      <li><strong>3</strong> Baños</li>
+                      <li><strong>Piscina</strong></li>
+                    </ul>
+                    <p class="price">525.000 €</p>
+                  </div>
+                </div>
               </div>
             </a>
           </div>
@@ -317,7 +373,7 @@
     <section id="featured-properties">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-12 text-center mb-4">
+          <div class="mb-4 text-center col-md-12">
             <h2 class="title">
               Propiedades<br />
               <span class="highlight">Destacadas</span><br />
@@ -325,8 +381,8 @@
           </div>
 
           <!-- Propiedad 1 -->
-          <div class="col-md-6 mb-4">
-            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
               <!-- Imagen de la propiedad con contenedor relativo -->
               <div class="imagen-propiedad position-relative">
                 <img src="assets/chalet-venta-perleta-maitino-perleta_24801_md.jpg" class="img-fluid" />
@@ -364,8 +420,8 @@
           </div>
 
           <!-- Propiedad 2 -->
-          <div class="col-md-6 mb-4">
-            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
               <!-- Imagen de la propiedad con contenedor relativo -->
               <div class="imagen-propiedad position-relative">
                 <img src="assets/piso-venta-elche-centro_25573_md.jpg" class="img-fluid" />
@@ -401,8 +457,8 @@
           </div>
 
           <!-- Propiedad 3 -->
-          <div class="col-md-6 mb-4">
-            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
               <!-- Imagen de la propiedad con contenedor relativo -->
               <div class="imagen-propiedad position-relative">
                 <img src="assets/chalet-venta-elche-pedanias-perleta_26754_md.jpg" class="img-fluid" />
@@ -441,8 +497,8 @@
           </div>
 
           <!-- Propiedad 4 -->
-          <div class="col-md-6 mb-4">
-            <a href="/propiedad/EN-9/" class="propiedad-destacada d-block text-decoration-none text-white">
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
               <!-- Imagen de la propiedad con contenedor relativo -->
               <div class="imagen-propiedad position-relative">
                 <img src="assets/piso-venta-elche-centro_26573_md.jpg" class="img-fluid" />
@@ -480,8 +536,8 @@
 
         <!-- Ver todas las propiedades -->
         <div class="container">
-          <div class="all-properties d-flex justify-content-center align-items-center mt-5 mb-5">
-            <a href="#" class="d-flex align-items-center text-decoration-none text-white">
+          <div class="mt-5 mb-5 all-properties d-flex justify-content-center align-items-center">
+            <a href="#" class="text-white d-flex align-items-center text-decoration-none">
               <p class="mb-0 me-3">Ver todas las <br />propiedades</p>
               <img src="assets/Icon feather-plus-circle.svg" class="img-fluid" alt="Más propiedades" />
             </a>
@@ -492,7 +548,7 @@
 
     <!-- SOBRE NOSOTROS -->
     <section id="sobre-nosotros" class="py-5">
-      <div class="container-fluid px-0 overflow-hidden">
+      <div class="px-0 overflow-hidden container-fluid">
         <div class="row g-0">
           <!-- Imagen izquierda -->
           <div class="col-xl-4 col-lg-5 d-none d-lg-block">
@@ -500,12 +556,12 @@
           </div>
 
           <!-- Texto centrado pero desplazado -->
-          <div class="col-xl-4 col-lg-6 col-md-10 offset-lg-1 px-3 px-md-4 px-lg-5 texto-central">
-            <div class="icono mb-4">
+          <div class="px-3 col-xl-4 col-lg-6 col-md-10 offset-lg-1 px-md-4 px-lg-5 texto-central">
+            <div class="mb-4 icono">
               <img src="assets/icon_2.svg" class="img-fluid" />
             </div>
 
-            <h1 class="titulo mb-4">
+            <h1 class="mb-4 titulo">
               Bienvenido a nuestra Inmobiliaria. Inmovalley fue fundada en Elche en el año 2005, dedicada a la intermediación inmobiliaria, contando
               sus componentes con más de veinte años de experiencia en el sector inmobiliario.
             </h1>
@@ -516,7 +572,7 @@
               profesionalidad de nuestros asesores ha ido creciendo constantemente.
             </p>
 
-            <a href="/sobre-nosotros/" class="btn btn-outline-primary px-4 px-xl-5"> Más sobre nosotros </a>
+            <a href="/sobre-nosotros/" class="px-4 btn btn-outline-primary px-xl-5"> Más sobre nosotros </a>
           </div>
 
           <!-- Imagen derecha recortada -->
@@ -531,8 +587,8 @@
     <section id="last-news">
       <div class="container">
         <div class="row">
-          <div class="col-12 text-lg-start text-center align-items-end d-flex justify-content-center">
-            <div class="col-lg-1 pe-lg-0 col-xl-2 col-12 text-lg-start text-center align-items-end d-flex justify-content-center">
+          <div class="text-center col-12 text-lg-start align-items-end d-flex justify-content-center">
+            <div class="text-center col-lg-1 pe-lg-0 col-xl-2 col-12 text-lg-start align-items-end d-flex justify-content-center">
               <div class="d-flex justify-content-center align-items-end">
                 <p class="vertical-text">
                   Últimas<br />
@@ -584,7 +640,7 @@
     <section id="contact-form" class="py-5">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8 col-12 d-flex flex-column align-items-center text-center">
+          <div class="text-center col-lg-8 col-12 d-flex flex-column align-items-center">
             <!-- Título en varias líneas -->
             <h2 class="contact-title">
               Contacta<br />
@@ -593,15 +649,15 @@
             </h2>
 
             <!-- Formulario -->
-            <form class="w-100 mt-4" novalidate>
+            <form class="mt-4 w-100" novalidate>
               <!-- Nombre completo (ancho completo) -->
               <div class="mb-3">
                 <input type="text" class="form-control" placeholder="Tu Nombre*" required />
               </div>
 
               <!-- Teléfono y Email (50/50) -->
-              <div class="row mb-3">
-                <div class="col-md-6 mb-3 mb-md-0">
+              <div class="mb-3 row">
+                <div class="mb-3 col-md-6 mb-md-0">
                   <input type="tel" class="form-control" placeholder="Tu Teléfono" />
                 </div>
                 <div class="col-md-6">
@@ -615,7 +671,7 @@
               </div>
 
               <!-- Política de privacidad -->
-              <div class="form-check mb-3 text-start">
+              <div class="mb-3 form-check text-start">
                 <input class="checkbox-round" type="checkbox" id="privacyPolicy" required />
 
                 <label class="form-check-label" for="privacyPolicy">
@@ -638,7 +694,7 @@
               </div>
 
               <!-- Texto responsable del tratamiento -->
-              <small class="d-block text-muted text-center">
+              <small class="text-center d-block text-muted">
                 Responsable del tratamiento: Nombre de la empresa. Los datos se utilizarán únicamente para responder a su consulta.
               </small>
             </form>
@@ -662,8 +718,8 @@
         </div>
 
         <!-- Menú vertical -->
-        <div class="col-12 mb-4">
-          <ul class="bottom-menu mb-0 pl-0">
+        <div class="mb-4 col-12">
+          <ul class="pl-0 mb-0 bottom-menu">
             <li class="list-inline-item active">
               <a href="/" class="active">Inicio</a>
             </li>
@@ -738,7 +794,7 @@
           </div>
 
           <!-- Facebook -->
-          <a href="https://www.facebook.com/inmovalleynew" target="_blank" class="facebook-link text-white fs-5">
+          <a href="https://www.facebook.com/inmovalleynew" target="_blank" class="text-white facebook-link fs-5">
             <i class="fab fa-facebook-f"></i>
           </a>
         </div>

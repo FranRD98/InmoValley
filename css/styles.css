@@ -29,7 +29,43 @@ a.active {
   text-transform: uppercase;
 }
 
-/* === HEADER === */
+.badge-valora {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: var(--color-primary);
+  padding: 4px 16px;
+  z-index: 9999;
+}
+
+.badge-valora a {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+.badge-valora:hover {
+  background-color: #fff;
+}
+
+.badge-valora:hover a {
+  color: var(--color-primary);
+}
+
+/* ===================== HEADER ===================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  background-color: var(--color-background-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
 .main-menu {
   gap: 0.5rem;
   font-size: 14px;
@@ -58,8 +94,8 @@ a.active {
 /* Fondo del menú desplegable */
 .idiomas-dropdown .dropdown-menu {
   background-color: var(--color-background-dark);
-  border: none; /* Opcional, quita borde por defecto */
-  min-width: auto; /* Ajusta el ancho si quieres */
+  border: none;
+  min-width: auto;
 }
 
 /* Color del texto de los items */
@@ -79,7 +115,7 @@ a.active {
   height: 20px;
 }
 
-/* ========== SIDEBAR ========== */
+/* ===================== SIDEBAR ===================== */
 #menu-lateral {
   background-color: var(--color-background-dark);
   width: 60vw;
@@ -124,7 +160,23 @@ a.active {
   justify-content: center;
 }
 
-/* === SLIDER - SEARCH === */
+/* ===================== HERO SECTION ===================== */
+.hero-section {
+  margin-bottom: 150px;
+}
+
+.search-selection {
+  padding-bottom: 60px;
+}
+
+.hero-arrow {
+  position: absolute;
+  left: 180px;
+  bottom: -50px;
+  padding-left: 25;
+}
+
+/* ===================== SLIDER ===================== */
 /* Imagen de fondo */
 .slider-image {
   background: url('../assets/slider.jpg') center/cover no-repeat;
@@ -158,77 +210,100 @@ a.active {
   margin: 0;
 }
 
-/* Buscador */
-.buscador {
-  margin-top: 200px;
-  margin-bottom: 200px;
-}
+/* ===================== SEARCH FORM ===================== */
 
-.search-option {
-  padding: 0;
-}
-
-.btn-search {
-  background-color: var(--color-primary);
-  color: white;
-}
-/* Caja completa donde escribes y se ven las etiquetas */
-.select2-container--default.select2-container {
-  width: 100% !important; /* Ancho completo de la columna */
-  border: 0px; /* Borde de la caja */
-  border-radius: 0; /* Sin redondeo */
-  padding: 0;
-}
-
-/* Área donde se escriben las búsquedas (textarea dentro) */
-.select2-container--default .select2-search__field {
-  font-style: italic;
-  font-size: 14px;
-  color: #000;
-  padding: 5px 0; /* Ajusta altura del input */
-}
-
-/* Placeholder (texto gris antes de escribir) */
-.select2-container--default .select2-selection__placeholder {
-  color: #aaa;
-  font-style: italic;
-}
-
-/* Cada "etiqueta" que se añade al seleccionar */
-.select2-container--default .select2-selection__choice {
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 500;
-  padding: 2px 5px;
-  margin: 2px 2px 2px 0; /* Ajusta separación entre etiquetas */
-}
-
-/* Dropdown que aparece al escribir */
-.select2-container--default .select2-dropdown {
-  background-color: #fff;
+/* Input de texto */
+.search-form .select2-container .select2-selection--multiple {
+  min-height: 54px;
+  padding: 8px 10px;
+  border-radius: 0px;
   border: 1px solid #ccc;
 }
 
-/* Opciones dentro del dropdown */
-.select2-container--default .select2-results__option {
-  padding: 6px 12px;
-  font-size: 14px;
-  color: #212529;
+/* Input de texto */
+.search-form .select2-container--default .select2-selection--multiple {
+  min-height: 54px;
+  padding: 8px 10px;
+  border-radius: 0px;
+  border: 1px solid #ccc;
 }
 
-/* Opción seleccionada al pasar el ratón */
-.select2-container--default .select2-results__option--highlighted {
-  background-color: #007bff;
-  color: #fff;
+/* Color del texto de las opciones */
+.select2-container .select2-results__option {
+  color: var(--color-background-dark);
 }
 
-/* ========== FUTURE SECTION ========== */
+/* Badge interior cuando seleccionas una opción */
+.select2-container--default .select2-selection__choice {
+  color: #181d24 !important;
+  font-style: italic !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  border: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+.btn-search {
+  height: 54px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  font-size: 15px;
+  background-color: #ffcb00;
+  border: 1px solid #ffcb00;
+  border-radius: 0px;
+  font-weight: 700;
+}
+
+.btn-search img {
+  margin-right: 8px;
+}
+
+.btn-clear-filters {
+  height: 54px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  font-size: 15px;
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 0px;
+  font-weight: 700;
+}
+
+.btn-clear-filters img {
+  margin-right: 8px;
+}
+
+.btn-advanced {
+  height: 54px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  font-size: 15px;
+  background-color: #978510;
+  border: 1px solid #978510;
+  border-radius: 0px;
+  font-weight: 700;
+}
+
+.btn-advanced img {
+  margin-right: 8px;
+}
+/* ===================== FUTURE SECTION ===================== */
 
 #future-section {
   background: url('../assets/banner-01-home.jpg') center/cover no-repeat;
   position: relative;
-  padding-top: 160px; /* espacio para el título */
-  padding-bottom: 120px; /* espacio para las cards */
+  padding-top: 160px;
+  padding-bottom: 120px;
 }
 
 /* Título encima del fondo */
@@ -246,7 +321,7 @@ a.active {
 /* Icono centrado */
 .future-icon {
   text-align: center;
-  margin-bottom: 60px; /* separa del grid */
+  margin-bottom: 60px;
 }
 
 #future-section a.mini-card {
@@ -293,12 +368,12 @@ a.active {
   padding-right: 20px;
 }
 
-/* ========== PROPIEDADES DEL MES ========= */
-#featured-properties .title {
-  font-size: 60px; /* tamaño del título */
+/* ===================== PROPIEDADES DEL MES ===================== */
+#property-offer .title {
+  font-size: 60px;
   font-weight: 300;
-  color: var(--color-white); /* color por defecto */
-  text-align: center; /* opcional */
+  color: var(--color-white);
+  text-align: center;
   text-transform: uppercase;
   line-height: 0.7;
   padding: 48px 0px;
@@ -312,17 +387,78 @@ a.active {
   font-weight: 400;
 }
 
-/* ========== PROPIEDADES DESTACADAS ========= */
+#property-offer .card-featured {
+  background-color: #3c4146;
+}
+
+#property-offer .card-featured .ref-propiedad-ofertada {
+  position: absolute;
+  left: 0;
+  background-color: #978510;
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#property-offer .card-featured .info-border .type {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#property-offer .card-featured .info-border .modality {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#property-offer .card-featured .info-border .location {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#property-offer .card-featured .info-border .price {
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffcb00;
+  letter-spacing: 1.8px;
+}
+
+#property-offer .info-propiedad .caracteristicas {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: start;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 0.7;
+  padding: 0;
+}
+
+#property-offer .info-propiedad .caracteristicas strong {
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+#property-offer .info-propiedad .caracteristicas li {
+  display: flex;
+  align-items: center;
+}
+
+/* ===================== PROPIEDADES DESTACADAS ===================== */
 #featured-properties {
   background-color: var(--color-background-dark);
   padding: 100px 0px;
 }
 
 #featured-properties .title {
-  font-size: 60px; /* tamaño del título */
+  font-size: 60px;
   font-weight: 300;
-  color: var(--color-white); /* color por defecto */
-  text-align: center; /* opcional */
+  color: var(--color-white);
+  text-align: center;
   text-transform: uppercase;
   line-height: 0.7;
   padding: 48px 0px;
@@ -336,29 +472,29 @@ a.active {
   font-weight: 400;
 }
 
-.propiedad-destacada {
+#featured-properties .propiedad-destacada {
   overflow: hidden;
 }
 
-.propiedad-destacada:hover {
+#featured-properties .propiedad-destacada:hover {
   background-color: var(--color-primary);
 }
 
-.propiedad-destacada:hover .info-propiedad {
+#featured-properties .propiedad-destacada:hover .info-propiedad {
   color: var(--color-background-dark);
 }
 
-.propiedad-destacada:hover .info-propiedad .price {
+#featured-properties .propiedad-destacada:hover .info-propiedad .price {
   color: var(--color-white);
 }
 
 /* Contenedor de la imagen para poder posicionar elementos encima */
-.imagen-propiedad {
+#featured-properties .imagen-propiedad {
   position: relative;
 }
 
 /* Icono de favoritos arriba a la derecha */
-.icono-favorito {
+#featured-properties .icono-favorito {
   top: 20px;
   right: 20px;
   position: absolute;
@@ -368,7 +504,7 @@ a.active {
 }
 
 /* Texto REF abajo a la derecha sobre la imagen */
-.ref-propiedad {
+#featured-properties .ref-propiedad {
   bottom: 0;
   right: 0;
   position: absolute;
@@ -381,51 +517,51 @@ a.active {
   letter-spacing: 2px;
 }
 
-.info-propiedad {
+#featured-properties .info-propiedad {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
 }
 
-.info-propiedad .info-border {
+#featured-properties .info-propiedad .info-border {
   border-right: 1px solid #6f6f6f;
   padding-right: 25px;
   height: 50%;
 }
 
 /* Imagen ajustable */
-.imagen-propiedad img {
+#featured-properties .imagen-propiedad img {
   width: 100%;
   display: block;
 }
 
-.info-propiedad .type {
+#featured-properties .info-propiedad .type {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.info-propiedad .modality {
+#featured-properties .info-propiedad .modality {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-.info-propiedad .location {
+#featured-properties .info-propiedad .location {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-.info-propiedad .price {
+#featured-properties .info-propiedad .price {
   font-size: 18px;
   font-weight: 500;
   color: var(--color-primary);
   letter-spacing: 1.8px;
 }
 
-.info-propiedad .caracteristicas {
+#featured-properties .info-propiedad .caracteristicas {
   display: flex; /* pone los elementos en fila */
   gap: 15px; /* espacio entre cada li */
   flex-wrap: wrap; /* opcional, si quieres que baje a la siguiente línea en pantallas pequeñas */
@@ -435,21 +571,21 @@ a.active {
   line-height: 0.7;
 }
 
-.info-propiedad .caracteristicas strong {
+#featured-properties .info-propiedad .caracteristicas strong {
   margin-right: 5px;
   font-weight: 700;
 }
 
-.info-propiedad .caracteristicas li {
+#featured-properties .info-propiedad .caracteristicas li {
   display: flex;
   align-items: center;
 }
 
-.all-properties a:hover p {
+#featured-properties .all-properties a:hover p {
   color: white;
 }
 
-.all-properties p {
+#featured-properties .all-properties p {
   color: var(--color-primary);
   font-family: var(--font-secondary);
   font-size: 24px;
@@ -459,15 +595,14 @@ a.active {
   margin-right: 10px;
 }
 
-.all-properties img {
+#featured-properties .all-properties img {
   margin-left: 10px;
 }
 
-/* ======= SOBRE NOSOTROS ======= */
+/* ===================== SOBRE NOSOTROS ===================== */
 #sobre-nosotros {
   padding-bottom: 140px;
 }
-/* Texto ligeramente desplazado hacia la derecha */
 #sobre-nosotros .texto-central {
   padding-left: 12px !important;
   padding-right: 12px !important;
@@ -475,7 +610,6 @@ a.active {
   left: 20px;
 }
 
-/* Tipografías */
 #sobre-nosotros .titulo {
   font-size: 20px;
   font-weight: 500;
@@ -506,7 +640,6 @@ a.active {
   color: var(--color-white);
 }
 
-/* Imágenes estilo "recortadas" */
 .object-fit-cover {
   object-fit: cover;
   height: 100%;
@@ -517,7 +650,7 @@ a.active {
   overflow: hidden;
 }
 
-/* ======= ULTIMAS NOTICIAS ======= */
+/* ===================== ÚLTIMAS NOTICIAS ===================== */
 #last-news {
   background-color: var(--color-white);
   color: var(--color-background-dark);
@@ -569,11 +702,11 @@ a.active {
 }
 
 #contact-form .contact-title {
-  font-size: 60px; /* tamaño del título */
+  font-size: 60px;
   font-weight: 300;
-  color: black; /* color por defecto */
-  line-height: 42px; /* ajusta la separación entre líneas */
-  text-align: center; /* opcional */
+  color: black;
+  line-height: 42px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -597,9 +730,9 @@ a.active {
 }
 
 .form-control:focus {
-  border-color: #000; /* color del borde al hacer focus */
-  box-shadow: none; /* eliminar el brillo azul de Bootstrap */
-  outline: none; /* quitar contorno */
+  border-color: #000;
+  box-shadow: none;
+  outline: none;
 }
 
 #contact-form input {
@@ -626,8 +759,8 @@ a.active {
   width: 18px;
   height: 18px;
 
-  border-radius: 50%; /* borde redondo */
-  border: 2px solid var(--color-white); /* color del borde */
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
   background-color: transparent;
 
   cursor: pointer;
@@ -635,9 +768,8 @@ a.active {
   margin-right: 10px;
 }
 
-/* Efecto al marcar */
 .checkbox-round:checked {
-  background-color: var(--color-white); /* fondo del círculo */
+  background-color: var(--color-white);
   border-color: var(--color-white);
 }
 
