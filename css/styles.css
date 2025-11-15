@@ -265,6 +265,7 @@ header {
   background: url('../assets/slider.jpg') center/cover no-repeat;
   height: 75vh;
   filter: brightness(0.7);
+  transition: transform 0.6s ease;
 }
 
 .slider-content {
@@ -291,6 +292,19 @@ header {
   font-family: var(--font-secondary);
   color: var(--color-primary);
   margin: 0;
+}
+
+/* ANIMACIÓN */
+
+/* Contenedor para imagen + flecha */
+.hero-arrow {
+  display: block;
+  transition: transform 0.6s ease; /* suaviza la animación */
+}
+
+/* Hover sobre la imagen misma */
+.hero-arrow:hover {
+  transform: translateY(60%);
 }
 
 /* ===================== SEARCH FORM ===================== */
