@@ -47,7 +47,15 @@
             <nav>
               <ul class="main-menu list-unstyled d-flex">
                 <li><a href="#" class="active">Inicio</a></li>
-                <li><a href="#">Propiedades</a></li>
+                <li class="dropdown">
+                  <a href="/propiedades/" class="dropdown-toggle" id="propiedadesDropdown"> Propiedades </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/propiedades/">Ver todas</a></li>
+                    <li><a class="dropdown-item" href="/propiedades-alquiler-a-largo-plazo/">Alquiler a largo plazo</a></li>
+                    <li><a class="dropdown-item" href="/propiedades-nueva-construccion/">Nueva construcción</a></li>
+                    <li><a class="dropdown-item" href="/propiedades-venta/">Venta</a></li>
+                  </ul>
+                </li>
                 <li><a href="#">Vender</a></li>
               </ul>
             </nav>
@@ -130,7 +138,7 @@
               aria-label="Cerrar"
               style="left: 0; transform: translate(-35px, 0)"
             >
-              <img src="/assets/Icon feather-plus-circle.svg" alt="Cerrar" />
+              <img src="/assets/icon-close-modal-menu.svg" alt="Cerrar" />
               <span>Cerrar</span>
             </button>
           </div>
