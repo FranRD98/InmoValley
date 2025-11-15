@@ -470,16 +470,14 @@ header {
 /* ===================== FUTURE SECTION ===================== */
 
 #future-section {
-  background: url('../assets/banner-01-home.jpg') center/cover no-repeat;
   position: relative;
-  padding-top: 160px;
-  padding-bottom: 120px;
 }
 
-/* Título encima del fondo */
-.future-title {
+.future-background {
+  background: url('../assets/banner-01-home.jpg') center/cover no-repeat;
+  padding-top: 160px;
+  padding-bottom: 120px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .future-title .title {
@@ -488,12 +486,18 @@ header {
   color: var(--color-primary);
 }
 
-/* Icono centrado */
 .future-icon {
-  text-align: center;
-  margin-bottom: 60px;
+  margin-top: 20px;
 }
 
+/* Cards flotando sobre el fondo */
+.future-cards {
+  margin-top: -100px; /* negativo para que sobresalgan */
+  position: relative;
+  z-index: 2;
+}
+
+/* Mini cards */
 #future-section a.mini-card {
   display: block;
   overflow: hidden;
@@ -504,19 +508,36 @@ header {
   text-align: left;
 }
 
-#future-section a.mini-card .card-title {
-  color: #ffcb00;
+#future-section a.mini-card::before {
+  content: '';
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  border-left: 50px solid #ffcb00;
-  display: inline-block;
-  line-height: 1.3;
-  min-height: 115px;
+  width: 100%;
+  height: 0;
+  background-color: var(--color-primary);
+  z-index: 1;
+  transition: height 0.5s ease-in-out;
+}
+
+#future-section a.mini-card .card-title,
+#future-section a.mini-card .card-total {
+  position: relative;
   z-index: 2;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 26px 30px 0;
+}
+
+#future-section a.mini-card:hover::before {
+  height: 100%;
+}
+
+#future-section a.mini-card:hover .card-title {
+  color: #000;
+  border-left-color: #000;
+}
+
+#future-section a.mini-card .card-title img {
+  display: block;
+  margin-top: 10px;
 }
 
 #future-section a.mini-card .card-total {
@@ -537,7 +558,6 @@ header {
   font-weight: 300;
   padding-right: 20px;
 }
-
 /* ===================== PROPIEDADES DEL MES ===================== */
 #property-offer .title {
   font-size: 60px;

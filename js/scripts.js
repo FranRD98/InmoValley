@@ -28,3 +28,14 @@ $(document).ready(function () {
     },
   });
 });
+
+// Cambiar fondo en sección "FUTURE"
+$(document).ready(function () {
+  var $bgImages = $('#future-bg .bg-image');
+
+  $('.mini-card').hover(function () {
+    var index = $(this).data('bg-index');
+    $bgImages.css('opacity', 0);
+    $bgImages.eq(index).css('opacity', 1);
+  });
+});
