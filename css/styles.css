@@ -471,13 +471,35 @@ header {
 
 #future-section {
   position: relative;
-}
-
-.future-background {
-  background: url('../assets/banner-01-home.jpg') center/cover no-repeat;
   padding-top: 160px;
   padding-bottom: 120px;
+  overflow: visible;
+}
+
+#future-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#future-bg .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.future-title {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .future-title .title {
@@ -487,17 +509,10 @@ header {
 }
 
 .future-icon {
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-/* Cards flotando sobre el fondo */
-.future-cards {
-  margin-top: -100px; /* negativo para que sobresalgan */
-  position: relative;
-  z-index: 2;
-}
-
-/* Mini cards */
 #future-section a.mini-card {
   display: block;
   overflow: hidden;
@@ -508,6 +523,7 @@ header {
   text-align: left;
 }
 
+/* Capa de relleno desde abajo */
 #future-section a.mini-card::before {
   content: '';
   position: absolute;
@@ -520,24 +536,43 @@ header {
   transition: height 0.5s ease-in-out;
 }
 
+/* Hover → la capa se expande */
+#future-section a.mini-card:hover::before {
+  height: 100%;
+}
+
+/* Hover → texto del título y border-left negro */
+#future-section a.mini-card:hover .card-title {
+  color: #000;
+  border-left-color: #000;
+}
+
+/* Ajustar arrow debajo del title */
+#future-section a.mini-card .card-title img {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Asegurar que el contenido de la card está encima del relleno */
 #future-section a.mini-card .card-title,
 #future-section a.mini-card .card-total {
   position: relative;
   z-index: 2;
 }
 
-#future-section a.mini-card:hover::before {
-  height: 100%;
-}
-
-#future-section a.mini-card:hover .card-title {
-  color: #000;
-  border-left-color: #000;
-}
-
-#future-section a.mini-card .card-title img {
-  display: block;
-  margin-top: 10px;
+#future-section a.mini-card .card-title {
+  color: #ffcb00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 50px solid #ffcb00;
+  display: inline-block;
+  line-height: 1.3;
+  min-height: 115px;
+  z-index: 2;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 26px 30px 0;
 }
 
 #future-section a.mini-card .card-total {
@@ -558,6 +593,7 @@ header {
   font-weight: 300;
   padding-right: 20px;
 }
+
 /* ===================== PROPIEDADES DEL MES ===================== */
 #property-offer .title {
   font-size: 60px;
