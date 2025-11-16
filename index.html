@@ -37,7 +37,79 @@
       <a href="/valorar-propiedad/">Valora tu propiedad</a>
     </div>
 
-    <header class="py-3">
+    <!-- Header móvil -->
+    <header class="d-block d-md-none mobile-header py-2 px-3">
+      <div class="d-flex align-items-center justify-content-between w-100">
+        <!-- Hamburguer -->
+        <button
+          class="hamburger-menu"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Logo -->
+        <a href="#" class="mobile-logo">
+          <img src="assets/logo_header.svg" alt="Inmovalley" class="img-fluid" />
+        </a>
+
+        <!-- Iconos derecha -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Idioma -->
+          <div class="dropdown idiomas-dropdown">
+            <a class="dropdown-toggle" href="#" id="langDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/es_flag.svg" alt="Español" />
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="langDropdownMobile">
+              <li>
+                <a class="dropdown-item" href="#"><img src="assets/eng_flag.svg" alt="EN" /> English</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Lupa -->
+          <a href="#search-form" class="search-icon">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Offcanvas menú móvil full screen -->
+    <div class="offcanvas offcanvas-start offcanvas-fullscreen" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header mt-4">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled mobile-menu">
+          <li><a href="/">Inicio</a></li>
+          <li class="dropdown">
+            <a class="dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true"> Propiedades </a>
+            <ul class="dropdown submenu list-unstyled">
+              <li><a class="dropdown-item" href="/propiedades/">Ver todas las propiedades</a></li>
+              <li><a class="dropdown-item" href="/propiedades-alquiler-a-largo-plazo/">Alquiler a largo plazo</a></li>
+              <li><a class="dropdown-item" href="/propiedades-nueva-construccion/">Nueva construcción</a></li>
+              <li><a class="dropdown-item" href="/propiedades-venta/">Venta</a></li>
+            </ul>
+          </li>
+          <li><a href="/servicios/">Servicios</a></li>
+          <li><a href="/vender-su-propiedad/">Vender</a></li>
+          <li><a href="/noticias/">Blog</a></li>
+          <li><a href="/contacto/">Contactar</a></li>
+          <li>
+            <a href="#"><img src="assets/icon_heart_fill.svg" alt="Favoritos" class="favoritos-icon" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <header class="d-none d-md-block py-3">
       <div class="container">
         <div class="row align-items-center">
           <!-- Menú izquierdo -->

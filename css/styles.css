@@ -187,6 +187,121 @@ header {
   height: 20px;
 }
 
+/* ===================== HEADER MÓVIL ===================== */
+/* ===================== HEADER MÓVIL ===================== */
+@media (max-width: 767.98px) {
+  .mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-background-dark);
+    color: var(--color-white);
+    z-index: 200;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+  }
+
+  .mobile-header .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .mobile-header .hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 2px;
+  }
+
+  .mobile-logo img {
+    height: 40px;
+  }
+
+  .mobile-header .search-icon i {
+    font-size: 20px;
+    color: var(--color-white);
+  }
+
+  .mobile-icons .dropdown-toggle img {
+    height: 24px;
+  }
+
+  body {
+    padding-top: 60px; /* evita que el header fije sobre el contenido */
+  }
+
+  /* Offcanvas */
+  .offcanvas-start {
+    width: 250px;
+    background-color: var(--color-background-dark);
+  }
+
+  .offcanvas-header .btn-close {
+    color: var(--color-white);
+    filter: invert(1);
+  }
+
+  .offcanvas-body {
+    padding: 0rem;
+  }
+
+  .offcanvas-body li {
+    background-color: var(--color-background-dark);
+  }
+  .offcanvas-body li a {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+  .offcanvas-body .submenu li {
+    background-color: #333;
+    margin-top: 2px;
+  }
+
+  .mobile-menu a {
+    color: var(--color-white);
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+  }
+
+  .mobile-menu .dropdown-menu {
+    background-color: var(--color-background-dark);
+    padding-left: 1rem;
+  }
+
+  /* Offcanvas móvil a pantalla completa */
+  .offcanvas-fullscreen {
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--color-background-dark);
+    z-index: 9999;
+  }
+
+  /* Botón de cerrar arriba a la izquierda */
+  .offcanvas-fullscreen .btn-close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--color-white);
+    filter: invert(1);
+    font-size: 1.5rem;
+    z-index: 1100;
+  }
+}
 /* ===================== SIDEBAR ===================== */
 #menu-lateral {
   background-color: var(--color-background-dark);
@@ -233,9 +348,9 @@ header {
 }
 
 .sidebar-menu li {
-  min-height: 60px; /* ajusta según tu diseño */
+  min-height: 60px;
   display: flex;
-  align-items: center; /* centra verticalmente */
+  align-items: center;
 }
 
 .sidebar-menu li a {
@@ -245,7 +360,7 @@ header {
 #menu-lateral .dropdown-menu {
   background-color: var(--color-background-dark);
   border: none;
-  min-width: 120px; /* ajusta al contenido */
+  min-width: 120px;
   padding: 0;
 }
 
@@ -261,19 +376,19 @@ header {
 }
 /* ANIMACIÓN SIDEBAR */
 #menu-lateral.offcanvas {
-  transform: none !important; /* quitar el desplazamiento */
-  transition: opacity 0.3s ease; /* transición de opacidad */
-  opacity: 0; /* oculto por defecto */
+  transform: none !important;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
 #menu-lateral.offcanvas.show {
-  opacity: 1; /* visible al mostrar */
+  opacity: 1;
 }
 
 .sidebar-menu li a {
   color: var(--color-white);
   transition: all 0.3s ease;
-  padding-left: 10px; /* espacio interno */
+  padding-left: 10px;
 }
 
 .sidebar-menu li a:hover {
@@ -334,7 +449,7 @@ header {
 /* Contenedor para imagen + flecha */
 .hero-arrow {
   display: block;
-  transition: transform 0.6s ease; /* suaviza la animación */
+  transition: transform 0.6s ease;
 }
 
 /* Hover sobre la imagen misma */
@@ -381,23 +496,23 @@ header {
 
 .select2-container--default .select2-selection--single::after,
 .select2-container--default .select2-selection--multiple::after {
-  content: ''; /* podemos poner la flecha con border */
+  content: '';
   position: absolute;
   top: 50%;
-  right: 10px; /* margen desde la derecha */
+  right: 10px;
   width: 0;
   height: 0;
   pointer-events: none;
   transform: translateY(-50%);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #333; /* color de la flecha */
+  border-top: 5px solid #333;
 }
 
 /* Ajuste si quieres que la flecha sea más visible */
 .select2-container--default.select2-container--open .select2-selection--single::after,
 .select2-container--default.select2-container--open .select2-selection--multiple::after {
-  transform: translateY(-50%) rotate(180deg); /* rota la flecha al abrir */
+  transform: translateY(-50%) rotate(180deg);
 }
 .search-form input[type='text'],
 .search-form input[type='number'] {
