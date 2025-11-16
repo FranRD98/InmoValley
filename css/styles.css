@@ -733,6 +733,34 @@ header {
   margin-right: 5px;
 }
 
+/* VENDE TU PROPIEDAD */
+#sell-property .main-title {
+  font-size: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 0.7;
+}
+
+#sell-property .main-title strong {
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--color-primary);
+  text-transform: none;
+  font-family: var(--font-secondary);
+}
+
+#sell-property .btn-vender {
+  background-color: var(--color-primary);
+  border-radius: 0;
+  color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#sell-property .btn-vender:hover {
+  background-color: #a79734;
+}
+
 /* ===================== PROPIEDADES DESTACADAS ===================== */
 #featured-properties {
   background-color: var(--color-background-dark);
