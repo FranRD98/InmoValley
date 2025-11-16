@@ -765,6 +765,81 @@ header {
   background-color: #a79734;
 }
 
+/* ===================== PROPIEDAD DEL MES – RESPONSIVE ===================== */
+@media (max-width: 767.98px) {
+  /* Imagen ocupa todo el ancho */
+  #property-offer .row.position-relative img {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    display: block;
+  }
+
+  /* Card superpuesta pasa debajo de la imagen sin separación */
+  #property-offer .card-featured {
+    position: static;
+    transform: none;
+    width: 100vw;
+    margin: 0;
+    padding: 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* Contenido de la card */
+  #property-offer .card-content {
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+
+  /* Ordenar características debajo de la location */
+  #property-offer .card-content .caracteristicas {
+    order: 2;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  #property-offer .card-content .price {
+    order: 3;
+  }
+
+  /* Ajustes de tipografía y márgenes */
+  #property-offer .title {
+    font-size: 36px;
+    padding: 30px 0;
+  }
+
+  #property-offer .card-content .type,
+  #property-offer .card-content .modality,
+  #property-offer .card-content .location {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  /* Ref y favorito dentro de la card en móvil */
+  #property-offer .ref-propiedad-ofertada,
+  #property-offer .fav-icon {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Quitar gap entre imagen y card */
+  #property-offer .row.position-relative {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ajuste general del contenedor */
+  #property-offer .container {
+    padding: 0;
+    max-width: 100vw;
+  }
+}
+
 /* ===================== PROPIEDADES DESTACADAS ===================== */
 #featured-properties {
   background-color: var(--color-background-dark);
