@@ -1160,8 +1160,10 @@ header {
   pointer-events: none;
 }
 /* ===================== CONTACT FORM ===================== */
+/* ===================== CONTACT FORM ===================== */
 #contact-form {
   background-color: var(--color-primary);
+  padding: 60px 0;
 }
 
 #contact-form .contact-title {
@@ -1181,6 +1183,10 @@ header {
 
 #contact-form .form-control {
   color: var(--color-white) !important;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid white;
 }
 
 .form-control::placeholder {
@@ -1198,13 +1204,6 @@ header {
   outline: none;
 }
 
-#contact-form input {
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid white;
-}
-
 #contact-form textarea {
   background-color: transparent;
   border-radius: 0;
@@ -1212,53 +1211,107 @@ header {
   border-bottom: 1px solid white;
 }
 
-/* Hacer el checkbox redondo */
-/* Ocultamos estilos nativos del checkbox */
+/* ===================== CHECKBOX REDONDO ===================== */
+/* Contenedor del checkbox para alineación */
+#contact-form .form-check {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* separación entre checkbox y texto */
+  text-align: left;
+}
+
+/* Hacer el checkbox completamente redondo */
 .checkbox-round {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  width: 34px;
-  height: 34px;
-
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 1px solid var(--color-primary);
+  border: 2px solid white;
   background-color: transparent;
 
   cursor: pointer;
   position: relative;
-  margin-right: 10px;
   transition: all 0.3s ease-in-out;
+  flex-shrink: 0; /* que no se encoja */
 }
 
+/* Hover sobre checkbox */
 .checkbox-round:hover {
-  background-color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Checkbox marcado */
 .checkbox-round:checked {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  background-color: white;
+  border-color: white;
 }
 
+/* Marca interior del checkbox */
 .checkbox-round:checked::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background-color: var(--color-primary);
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* Evitar efecto de focus de Bootstrap */
+/* Evitar focus feo de Bootstrap */
 .checkbox-round:focus {
   outline: none;
   box-shadow: none;
 }
 
+/* Texto del label */
+#contact-form .form-check-label {
+  color: var(--color-white);
+  font-size: 14px;
+  line-height: 1.3;
+  text-transform: none;
+}
+
+/* Captcha */
+#contact-form .mb-3.d-flex.justify-content-center img {
+  max-width: 25%;
+}
+
+/* Botón enviar */
+#contact-form button.btn-primary {
+  background-color: var(--color-background-dark);
+  color: var(--color-white);
+  font-weight: 700;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+
+  /* Ancho completo */
+  width: 100%;
+  max-width: 500px; /* opcional: límite en pantallas grandes */
+  display: block;
+  margin: 0 auto; /* centrado */
+}
+
+/* Texto responsable del tratamiento */
+#contact-form small {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+#contact-form small {
+  color: white;
+}
 /* ===================== FOOTER VERTICAL ===================== */
 #footer-vertical {
   background-color: var(--color-background-dark);
