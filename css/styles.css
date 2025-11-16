@@ -39,8 +39,6 @@ a.active {
 }
 
 .badge-valora {
-  max-width: 100%;
-  left: 0;
   position: fixed;
   top: 50%;
   right: 0;
