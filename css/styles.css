@@ -1056,23 +1056,93 @@ header {
 }
 
 #last-news .card {
+  position: relative;
   padding: 0 12px;
   border: none;
+  overflow: hidden;
 }
 
-#last-news .image img {
-  width: 100%;
+/* Contenedor de la imagen relativo */
+#last-news .card .image {
+  position: relative;
+  overflow: hidden;
 }
 
-#last-news .text {
-  padding: 10px 20px;
+/* Overlay sobre la imagen */
+#last-news .card .image::after {
+  content: '';
   position: absolute;
-  color: var(--color-white);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+/* Hover overlay */
+#last-news .card:hover .image::after {
+  opacity: 0.7;
+}
+
+/* Imagen ajustada para que siempre cubra el overlay */
+#last-news .card .image img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Texto siempre visible encima del overlay */
+#last-news .card .text {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  z-index: 2;
 }
 
+/* Cinta abajo izquierda */
+#last-news .card .cinta {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 15px;
+  z-index: 3;
+  text-transform: uppercase;
+}
+
+/* Flecha abajo derecha */
+#last-news .card .flecha {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  background-image: url('assets/Icon feather-arrow-right.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Icono plus con flip */
+#last-news .col-lg-2 img {
+  transition: transform 0.8s ease;
+  transform-origin: center;
+}
+
+#last-news .col-lg-2 img:hover {
+  transform: rotateY(180deg);
+}
 /* ===================== SECTION BLOCK ===================== */
 #block-section {
   height: 70vh;
