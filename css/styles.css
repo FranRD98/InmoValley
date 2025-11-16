@@ -1317,14 +1317,6 @@ header {
   color: white;
 }
 /* ===================== FOOTER VERTICAL ===================== */
-/* Footer vertical y bottom-menu */
-#footer-vertical,
-.bottom-menu {
-  width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
 #footer-vertical {
   background-color: var(--color-background-dark);
   padding-top: 80px;
@@ -1362,25 +1354,44 @@ header {
   background-color: var(--color-primary);
 }
 
-/* ===================== FOOTER VERTICAL RESPONSIVO ===================== */
+/* FOOTER VERTICAL – ajustes móviles */
 @media (max-width: 767px) {
   #footer-vertical .bottom-menu {
-    flex-direction: column; /* menú vertical en móviles */
+    flex-direction: column !important; /* menú principal vertical */
     align-items: center;
-    gap: 10px; /* separa los items */
   }
 
   #footer-vertical .bottom-menu li {
-    margin: 5px 0; /* espacio vertical entre elementos */
+    margin: 5px 0; /* separación vertical */
+  }
+
+  #footer-vertical .bottom-menu a {
+    display: block;
+    text-align: center;
+  }
+
+  #footer-vertical .dropdown-menu {
+    text-align: center; /* dropdown centrado */
   }
 
   #footer-vertical .details {
-    font-size: 24px; /* reduce tamaño en móviles */
+    font-size: 24px; /* más manejable en móvil */
   }
 
-  #footer-vertical {
-    padding-top: 40px;
-    padding-bottom: 30px;
+  #footer-vertical .mb-5 {
+    margin-bottom: 30px; /* reduce espacio del logo */
+  }
+
+  #footer-vertical .pb-4.pb-lg-5 {
+    padding-bottom: 30px; /* reduce padding de contacto */
+  }
+
+  #footer-vertical .idiomas-dropdown {
+    margin-bottom: 10px;
+  }
+
+  #footer-vertical .facebook-link {
+    font-size: 24px;
   }
 }
 
@@ -1396,37 +1407,20 @@ header {
   color: var(--color-primary-hover);
 }
 
-/* ===================== FOOTER RESPONSIVO ===================== */
-#footer-legal {
-  background-color: var(--color-primary);
-  padding: 25px 15px; /* más coherente en móviles */
-  font-size: 14px;
-  font-weight: 400;
-  overflow-x: hidden; /* previene scroll horizontal */
-}
+/* FOOTER HORIZONTAL – ajustes móviles */
+@media (max-width: 767px) {
+  #footer-legal .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-#footer-legal a:hover {
-  color: var(--color-primary-hover);
-}
+  #footer-legal .col-md-8,
+  #footer-legal .col-md-4 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
-/* Contenedor del footer */
-#footer-legal .container {
-  display: flex;
-  flex-direction: column; /* Columna en móvil */
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 100%; /* evita sobresalir del viewport */
-  padding: 0; /* elimina padding extra del container bootstrap */
-  box-sizing: border-box;
-}
-
-/* Texto legal y crédito diseño */
-#footer-legal .col-md-8,
-#footer-legal .col-md-4 {
-  width: 100%; /* que ocupen todo en móvil */
-  text-align: center; /* centrado en móvil */
-  padding: 0;
-  margin: 0;
+  #footer-legal .col-md-4 {
+    margin-bottom: 0;
+  }
 }
