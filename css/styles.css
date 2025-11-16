@@ -6,12 +6,21 @@
   --font-main: 'Montserrat', sans-serif;
   --font-secondary: 'Caveat', sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
   font-family: var(--font-main);
   background-color: var(--color-background-dark);
   color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -30,6 +39,8 @@ a.active {
 }
 
 .badge-valora {
+  max-width: 100%;
+  left: 0;
   position: fixed;
   top: 50%;
   right: 0;
@@ -37,6 +48,7 @@ a.active {
   background-color: var(--color-primary);
   padding: 4px 16px;
   z-index: 9999;
+  box-sizing: border-box;
 }
 
 .badge-valora a {
@@ -1305,6 +1317,14 @@ header {
   color: white;
 }
 /* ===================== FOOTER VERTICAL ===================== */
+/* Footer vertical y bottom-menu */
+#footer-vertical,
+.bottom-menu {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 #footer-vertical {
   background-color: var(--color-background-dark);
   padding-top: 80px;
