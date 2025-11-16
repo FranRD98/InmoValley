@@ -1163,7 +1163,20 @@ header {
   height: auto;
   pointer-events: none;
 }
-/* ===================== CONTACT FORM ===================== */
+
+/* ===================== SECTION BLOCK – ajustes móviles ===================== */
+@media (max-width: 767px) {
+  #block-section {
+    height: auto;
+  }
+
+  #block-section .img-parallax {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
+}
 /* ===================== CONTACT FORM ===================== */
 #contact-form {
   background-color: var(--color-primary);
