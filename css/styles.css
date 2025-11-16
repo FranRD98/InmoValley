@@ -48,14 +48,6 @@ a.active {
   white-space: nowrap;
 }
 
-.badge-valora:hover {
-  background-color: #fff;
-}
-
-.badge-valora:hover a {
-  color: var(--color-primary);
-}
-
 /* ===================== HEADER ===================== */
 header {
   position: sticky;
