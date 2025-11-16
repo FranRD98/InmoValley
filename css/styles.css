@@ -1373,3 +1373,38 @@ header {
 #footer-legal a:hover {
   color: var(--color-primary-hover);
 }
+
+/* ===================== FOOTER RESPONSIVO ===================== */
+#footer-legal {
+  background-color: var(--color-primary);
+  padding: 25px 15px; /* más coherente en móviles */
+  font-size: 14px;
+  font-weight: 400;
+  overflow-x: hidden; /* previene scroll horizontal */
+}
+
+#footer-legal a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Contenedor del footer */
+#footer-legal .container {
+  display: flex;
+  flex-direction: column; /* Columna en móvil */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%; /* evita sobresalir del viewport */
+  padding: 0; /* elimina padding extra del container bootstrap */
+  box-sizing: border-box;
+}
+
+/* Texto legal y crédito diseño */
+#footer-legal .col-md-8,
+#footer-legal .col-md-4 {
+  width: 100%; /* que ocupen todo en móvil */
+  text-align: center; /* centrado en móvil */
+  padding: 0;
+  margin: 0;
+}
