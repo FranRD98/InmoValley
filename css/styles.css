@@ -1053,6 +1053,14 @@ header {
   line-height: 0.7;
 }
 
+@media (max-width: 991px) {
+  #last-news .vertical-text {
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    font-size: 48px;
+  }
+}
+
 #last-news .vertical-text strong {
   font-family: var(--font-secondary);
   text-transform: none;
@@ -1147,6 +1155,7 @@ header {
 #last-news .col-lg-2 img:hover {
   transform: rotateY(180deg);
 }
+
 /* ===================== SECTION BLOCK ===================== */
 #block-section {
   position: relative;
