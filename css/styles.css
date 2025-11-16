@@ -299,7 +299,6 @@ header {
 }
 
 /* ANIMACIÓN */
-
 /* Contenedor para imagen + flecha */
 .hero-arrow {
   display: block;
@@ -310,7 +309,21 @@ header {
 .hero-arrow:hover {
   transform: translateY(60%);
 }
+/* ===================== SLIDER CONTENT MÓVIL ===================== */
+@media (max-width: 767.98px) {
+  .slider-title {
+    font-size: 80px;
+    font-weight: 300;
+    text-align: center;
+  }
 
+  .slider-subtitle {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--color-white);
+    text-align: center;
+  }
+}
 /* ===================== SEARCH FORM ===================== */
 #search-form {
   padding-bottom: 60px;
