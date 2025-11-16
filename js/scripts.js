@@ -39,3 +39,26 @@ $(document).ready(function () {
     $bgImages.eq(index).css('opacity', 1);
   });
 });
+
+// ===================== Parallax en jQuery =====================
+$(document).ready(function () {
+  $(window).on('scroll', function () {
+    var scrollTop = $(this).scrollTop();
+    var $block = $('#block-section');
+    var $img = $block.find('.img-parallax');
+
+    // Solo si la imagen existe
+    if ($img.length) {
+      // Calculamos la posición relativa del bloque
+      var offset = $block.offset().top;
+      var height = $block.outerHeight();
+
+      if (scrollTop + $(window).height() > offset && scrollTop < offset + height) {
+        // Velocidad de parallax
+        var speed = -0.3;
+        var yPos = (scrollTop - offset) * speed;
+        $img.css('transform', 'translate(-50%, calc(-50% + ' + yPos + 'px))');
+      }
+    }
+  });
+});

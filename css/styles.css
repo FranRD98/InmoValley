@@ -1145,10 +1145,20 @@ header {
 }
 /* ===================== SECTION BLOCK ===================== */
 #block-section {
+  position: relative;
+  overflow: hidden;
   height: 70vh;
-  background: url('../assets/final_background.jpg') center/cover no-repeat;
 }
 
+#block-section .img-parallax {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
 /* ===================== CONTACT FORM ===================== */
 #contact-form {
   background-color: var(--color-primary);
