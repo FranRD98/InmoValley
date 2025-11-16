@@ -37,7 +37,7 @@
       <a href="/valorar-propiedad/">Valora tu propiedad</a>
     </div>
 
-    <header class="py-3>
+    <header class="py-3">
       <div class="container">
         <div class="row align-items-center">
           <!-- Menú izquierdo -->
@@ -196,158 +196,284 @@
       <!-- Buscador -->
       <div id="search-form" class="search-form">
         <div class="container">
-          <div class="row">
-            <form action="" class="row gx-0 gy-0 align-items-end">
-              <!-- ESTADO -->
-              <div class="col">
-                <select name="st[]" id="st" class="form-select select2" multiple data-placeholder="Estado">
-                  <option value="4">Alquiler a largo plazo</option>
-                  <option value="2">Nueva construcción</option>
-                  <option value="1">Venta</option>
-                </select>
-              </div>
+          <!-- BUSCADOR ESCRITORIO -->
+          <div class="d-none d-md-block">
+            <div class="row">
+              <form action="" class="row gx-0 gy-0 align-items-end">
+                <!-- ESTADO -->
+                <div class="col">
+                  <select name="st[]" id="st" class="form-select select2" multiple data-placeholder="Estado">
+                    <option value="4">Alquiler a largo plazo</option>
+                    <option value="2">Nueva construcción</option>
+                    <option value="1">Venta</option>
+                  </select>
+                </div>
 
-              <!-- TIPO -->
-              <div class="col">
-                <select name="ty[]" id="ty" class="form-select select2" multiple data-placeholder="Tipo">
-                  <option value="4">Adosado</option>
-                  <option value="2">Apartamento</option>
-                  <option value="1">Ático</option>
-                  <option value="1">Casa</option>
-                  <option value="1">Casa con terreno</option>
-                  <option value="1">Casa de Pueblo</option>
-                  <option value="1">Chalet</option>
-                  <option value="1">Despacho</option>
-                  <option value="1">Duplex</option>
-                  <option value="1">Entresuelo</option>
-                  <option value="1">Finca rústica</option>
-                  <option value="1">Garaje</option>
-                  <option value="1">Inmueble singular</option>
-                  <option value="1">Local comercial</option>
-                  <option value="1">Nave industrial</option>
-                  <option value="1">Oficina</option>
-                  <option value="1">Parcela</option>
-                  <option value="1">Parking</option>
-                  <option value="1">Piso</option>
-                  <option value="1">Planta baja</option>
-                  <option value="1">Solar</option>
-                  <option value="1">Terreno industrial</option>
-                  <option value="1">Terreno rural</option>
-                  <option value="1">Terreno urbanizable</option>
-                  <option value="1">Terreno urbano</option>
-                </select>
-              </div>
+                <!-- TIPO -->
+                <div class="col">
+                  <select name="ty[]" id="ty" class="form-select select2" multiple data-placeholder="Tipo">
+                    <option value="4">Adosado</option>
+                    <option value="2">Apartamento</option>
+                    <option value="1">Ático</option>
+                    <option value="1">Casa</option>
+                    <option value="1">Casa con terreno</option>
+                    <option value="1">Casa de Pueblo</option>
+                    <option value="1">Chalet</option>
+                    <option value="1">Despacho</option>
+                    <option value="1">Duplex</option>
+                    <option value="1">Entresuelo</option>
+                    <option value="1">Finca rústica</option>
+                    <option value="1">Garaje</option>
+                    <option value="1">Inmueble singular</option>
+                    <option value="1">Local comercial</option>
+                    <option value="1">Nave industrial</option>
+                    <option value="1">Oficina</option>
+                    <option value="1">Parcela</option>
+                    <option value="1">Parking</option>
+                    <option value="1">Piso</option>
+                    <option value="1">Planta baja</option>
+                    <option value="1">Solar</option>
+                    <option value="1">Terreno industrial</option>
+                    <option value="1">Terreno rural</option>
+                    <option value="1">Terreno urbanizable</option>
+                    <option value="1">Terreno urbano</option>
+                  </select>
+                </div>
 
-              <!-- POBLACIÓN -->
-              <div class="col">
-                <select name="po[]" id="po" class="form-select select2" multiple data-placeholder="Población">
-                  <option value="4">Alquiler a largo plazo</option>
-                  <option value="2">Nueva construcción</option>
-                  <option value="1">Venta</option>
-                </select>
-              </div>
+                <!-- POBLACIÓN -->
+                <div class="col">
+                  <select name="po[]" id="po" class="form-select select2" multiple data-placeholder="Población">
+                    <option value="30">Alcala del Jucar</option>
+                    <option value="18">Alicante</option>
+                    <option value="7">Arenales del sol</option>
+                  </select>
+                </div>
 
-              <!-- ZONA -->
-              <div class="col">
-                <select name="zo[]" id="zo" class="form-select select2" multiple data-placeholder="Zona">
-                  <option value="4">Alcala del Jucar</option>
-                  <option value="2">Alicante</option>
-                  <option value="1">Arenales del sol</option>
-                  <option value="1">Aspe</option>
-                  <option value="1">Crevillent</option>
-                  <option value="1">Elche</option>
-                  <option value="1">Elche pedanias</option>
-                  <option value="1">La hoya</option>
-                  <option value="1">Murcia</option>
-                  <option value="1">Orihuela</option>
-                  <option value="1">Peña las aguilas</option>
-                  <option value="1">Perleta</option>
-                  <option value="1">Venta</option>
-                  <option value="1">Santa Pola</option>
-                  <option value="1">Torrellano</option>
-                  <option value="1">Porcelanosa</option>
-                  <option value="1">Raval - Puertas Coloradas</option>
-                  <option value="1">Santa Maria de Gracia</option>
-                  <option value="1">Santa pola del este</option>
-                  <option value="1">Sector Quinto</option>
-                  <option value="1">TORRELLANO</option>
-                  <option value="1">Toscar</option>
-                  <option value="1">Tres Hermanas</option>
-                  <option value="1">Valverde</option>
-                  <option value="1">xLas bayas</option>
-                </select>
-              </div>
+                <!-- ZONA -->
+                <div class="col">
+                  <select name="zo[]" id="zo" class="form-select select2" multiple data-placeholder="Zona">
+                    <option value="4">Alcala del Jucar</option>
+                    <option value="2">Alicante</option>
+                    <option value="1">Arenales del sol</option>
+                    <option value="1">Aspe</option>
+                    <option value="1">Crevillent</option>
+                    <option value="1">Elche</option>
+                    <option value="1">Elche pedanias</option>
+                    <option value="1">La hoya</option>
+                    <option value="1">Murcia</option>
+                    <option value="1">Orihuela</option>
+                    <option value="1">Peña las aguilas</option>
+                    <option value="1">Perleta</option>
+                    <option value="1">Venta</option>
+                    <option value="1">Santa Pola</option>
+                    <option value="1">Torrellano</option>
+                    <option value="1">Porcelanosa</option>
+                    <option value="1">Raval - Puertas Coloradas</option>
+                    <option value="1">Santa Maria de Gracia</option>
+                    <option value="1">Santa pola del este</option>
+                    <option value="1">Sector Quinto</option>
+                    <option value="1">TORRELLANO</option>
+                    <option value="1">Toscar</option>
+                    <option value="1">Tres Hermanas</option>
+                    <option value="1">Valverde</option>
+                    <option value="1">xLas bayas</option>
+                  </select>
+                </div>
 
-              <!-- PRECIO HASTA -->
-              <div class="col">
-                <select name="pr[]" id="pr" class="form-select select2" multiple data-placeholder="Precio hasta">
-                  <option value="" selected="">Precio hasta</option>
-                  <option value="25000">25000 €</option>
-                  <option value="50000">50000 €</option>
-                  <option value="75000">75000 €</option>
-                  <option value="100000">100000 €</option>
-                  <option value="125000">125000 €</option>
-                  <option value="150000">150000 €</option>
-                  <option value="175000">175000 €</option>
-                  <option value="200000">200000 €</option>
-                  <option value="225000">225000 €</option>
-                  <option value="250000">250000 €</option>
-                  <option value="275000">275000 €</option>
-                  <option value="300000">300000 €</option>
-                  <option value="350000">350000 €</option>
-                  <option value="400000">400000 €</option>
-                  <option value="450000">450000 €</option>
-                  <option value="500000">500000 €</option>
-                  <option value="550000">550000 €</option>
-                  <option value="600000">600000 €</option>
-                  <option value="650000">650000 €</option>
-                  <option value="700000">700000 €</option>
-                  <option value="1000000">+1000000 €</option>
-                </select>
-              </div>
+                <!-- PRECIO HASTA -->
+                <div class="col">
+                  <select name="pr[]" id="pr" class="form-select select2" multiple data-placeholder="Precio hasta">
+                    <option value="" selected="">Precio hasta</option>
+                    <option value="25000">25000 €</option>
+                    <option value="50000">50000 €</option>
+                    <option value="75000">75000 €</option>
+                    <option value="100000">100000 €</option>
+                    <option value="125000">125000 €</option>
+                    <option value="150000">150000 €</option>
+                    <option value="175000">175000 €</option>
+                    <option value="200000">200000 €</option>
+                    <option value="225000">225000 €</option>
+                    <option value="250000">250000 €</option>
+                    <option value="275000">275000 €</option>
+                    <option value="300000">300000 €</option>
+                    <option value="350000">350000 €</option>
+                    <option value="400000">400000 €</option>
+                    <option value="450000">450000 €</option>
+                    <option value="500000">500000 €</option>
+                    <option value="550000">550000 €</option>
+                    <option value="600000">600000 €</option>
+                    <option value="650000">650000 €</option>
+                    <option value="700000">700000 €</option>
+                    <option value="1000000">+1000000 €</option>
+                  </select>
+                </div>
 
-              <!-- REFERENCIA -->
-              <div class="col">
-                <input type="text" name="re" id="re" class="form-control search-input" placeholder="Referencia" />
-              </div>
+                <!-- REFERENCIA -->
+                <div class="col">
+                  <input type="text" name="re" id="re" class="form-control search-input" placeholder="Referencia" />
+                </div>
 
-              <div class="col-6 col-lg-2 d-grid">
-                <button type="submit" class="btn btn-secondary btn-search">
-                  <img src="assets/search.svg" alt="Buscar" />
-                  Buscar
-                </button>
-              </div>
+                <div class="col-6 col-lg-2 d-grid">
+                  <button type="submit" class="btn btn-secondary btn-search">
+                    <img src="assets/search.svg" alt="Buscar" />
+                    Buscar
+                  </button>
+                </div>
 
-              <!-- Checkbox oculto para activar campos avanzados -->
-              <input type="checkbox" id="toggle-advanced" hidden />
+                <!-- Checkbox oculto para activar campos avanzados -->
+                <input type="checkbox" id="toggle-advanced" hidden />
 
-              <!-- ======================= CAMPOS AVANZADOS ======================= -->
-              <div class="mt-3 advanced-fields">
-                <div class="row gx-2">
-                  <div class="col">
-                    <input type="number" class="form-control search-input" placeholder="Precio desde" name="price_from" />
-                  </div>
-                  <div class="col">
-                    <input type="number" class="form-control search-input" placeholder="Baños" name="bathrooms" />
-                  </div>
-                  <div class="col d-flex align-items-center">
-                    <input type="checkbox" id="pool" name="pool" class="checkbox-round" />
-                    <label for="pool" class="ms-2">Piscina</label>
+                <!-- ======================= CAMPOS AVANZADOS ======================= -->
+                <div class="mt-3 advanced-fields">
+                  <div class="row gx-2">
+                    <div class="col">
+                      <input type="number" class="form-control search-input" placeholder="Precio desde" name="price_from" />
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control search-input" placeholder="Baños" name="bathrooms" />
+                    </div>
+                    <div class="col d-flex align-items-center">
+                      <input type="checkbox" id="pool" name="pool" class="checkbox-round" />
+                      <label for="pool" class="ms-2">Piscina</label>
+                    </div>
                   </div>
                 </div>
+              </form>
+
+              <!-- ======================= BOTONES INFERIORES ======================= -->
+
+              <!-- Botón LIMPIAR -->
+              <div class="p-0 mt-3 col-6 col-md-3 d-grid">
+                <button type="reset" class="btn-clear-filters"><img src="assets/eraser.svg" alt="" /> Limpiar Filtros</button>
               </div>
-            </form>
 
-            <!-- ======================= BOTONES INFERIORES ======================= -->
-
-            <!-- Botón LIMPIAR -->
-            <div class="p-0 mt-3 col-6 col-md-3 d-grid">
-              <button type="reset" class="btn-clear-filters"><img src="assets/eraser.svg" alt="" /> Limpiar Filtros</button>
+              <!-- Botón BÚSQUEDA AVANZADA -->
+              <div class="p-0 mt-3 col-6 col-md-3 d-grid">
+                <label for="toggle-advanced" class="btn-advanced"> <img src="assets/icon-advanced-search-2.svg" alt="" /> Búsqueda Avanzada </label>
+              </div>
             </div>
+          </div>
 
-            <!-- Botón BÚSQUEDA AVANZADA -->
-            <div class="p-0 mt-3 col-6 col-md-3 d-grid">
-              <label for="toggle-advanced" class="btn-advanced"> <img src="assets/icon-advanced-search-2.svg" alt="" /> Búsqueda Avanzada </label>
+          <!-- BUSCADOR MÓVIL -->
+          <div class="d-md-none">
+            <div class="row">
+              <form action="" class="row gx-0 gy-0 align-items-end">
+                <!-- ESTADO -->
+                <div class="col-12 my-2">
+                  <select name="st_m[]" id="st_m" class="form-select select2" multiple data-placeholder="Estado">
+                    <option value="4">Alquiler a largo plazo</option>
+                    <option value="2">Nueva construcción</option>
+                    <option value="1">Venta</option>
+                  </select>
+                </div>
+
+                <!-- TIPO -->
+                <div class="col-6 my-2">
+                  <select name="ty_m[]" id="ty_m" class="form-select select2" multiple data-placeholder="Tipo">
+                    <option value="4">Adosado</option>
+                    <option value="2">Apartamento</option>
+                    <option value="1">Ático</option>
+                    <option value="1">Casa</option>
+                    <option value="1">Casa con terreno</option>
+                    <option value="1">Casa de Pueblo</option>
+                    <option value="1">Chalet</option>
+                    <option value="1">Despacho</option>
+                    <option value="1">Duplex</option>
+                    <option value="1">Entresuelo</option>
+                    <option value="1">Finca rústica</option>
+                    <option value="1">Garaje</option>
+                    <option value="1">Inmueble singular</option>
+                    <option value="1">Local comercial</option>
+                    <option value="1">Nave industrial</option>
+                    <option value="1">Oficina</option>
+                    <option value="1">Parcela</option>
+                    <option value="1">Parking</option>
+                    <option value="1">Piso</option>
+                    <option value="1">Planta baja</option>
+                    <option value="1">Solar</option>
+                    <option value="1">Terreno industrial</option>
+                    <option value="1">Terreno rural</option>
+                    <option value="1">Terreno urbanizable</option>
+                    <option value="1">Terreno urbano</option>
+                  </select>
+                </div>
+
+                <!-- POBLACIÓN -->
+                <div class="col-6 my-2">
+                  <select name="po[]_m" id="po_m" class="form-select select2" multiple data-placeholder="Población">
+                    <option value="30">Alcala del Jucar</option>
+                    <option value="18">Alicante</option>
+                    <option value="7">Arenales del sol</option>
+                  </select>
+                </div>
+
+                <!-- PRECIO HASTA -->
+                <div class="col-6 my-2">
+                  <select name="pr[]_m" id="pr_m" class="form-select select2" multiple data-placeholder="Precio hasta">
+                    <option value="" selected="">Precio hasta</option>
+                    <option value="25000">25000 €</option>
+                    <option value="50000">50000 €</option>
+                    <option value="75000">75000 €</option>
+                    <option value="100000">100000 €</option>
+                    <option value="125000">125000 €</option>
+                    <option value="150000">150000 €</option>
+                    <option value="175000">175000 €</option>
+                    <option value="200000">200000 €</option>
+                    <option value="225000">225000 €</option>
+                    <option value="250000">250000 €</option>
+                    <option value="275000">275000 €</option>
+                    <option value="300000">300000 €</option>
+                    <option value="350000">350000 €</option>
+                    <option value="400000">400000 €</option>
+                    <option value="450000">450000 €</option>
+                    <option value="500000">500000 €</option>
+                    <option value="550000">550000 €</option>
+                    <option value="600000">600000 €</option>
+                    <option value="650000">650000 €</option>
+                    <option value="700000">700000 €</option>
+                    <option value="1000000">+1000000 €</option>
+                  </select>
+                </div>
+
+                <!-- PRECIO HASTA -->
+                <div class="col-6 my-2">
+                  <select name="prd[]_m" id="prd_m" class="form-select select2" multiple data-placeholder="Precio desde">
+                    <option value="" selected="">Precio desde</option>
+                    <option value="25000">25000 €</option>
+                    <option value="50000">50000 €</option>
+                    <option value="75000">75000 €</option>
+                    <option value="100000">100000 €</option>
+                    <option value="125000">125000 €</option>
+                    <option value="150000">150000 €</option>
+                    <option value="175000">175000 €</option>
+                    <option value="200000">200000 €</option>
+                    <option value="225000">225000 €</option>
+                    <option value="250000">250000 €</option>
+                    <option value="275000">275000 €</option>
+                    <option value="300000">300000 €</option>
+                    <option value="350000">350000 €</option>
+                    <option value="400000">400000 €</option>
+                    <option value="450000">450000 €</option>
+                    <option value="500000">500000 €</option>
+                    <option value="550000">550000 €</option>
+                    <option value="600000">600000 €</option>
+                    <option value="650000">650000 €</option>
+                    <option value="700000">700000 €</option>
+                    <option value="1000000">+1000000 €</option>
+                  </select>
+                </div>
+
+                <div class="p-0 mt-3 col-6 col-md-3 d-grid">
+                  <button type="reset" class="btn-clear-filters">Limpiar Filtros</button>
+                </div>
+                <div class="col-6 col-lg-2 d-grid">
+                  <button type="submit" class="btn btn-secondary btn-search">Buscar</button>
+                </div>
+              </form>
+
+              <!-- ======================= BOTONES INFERIORES ======================= -->
+
+              <!-- Botón LIMPIAR -->
             </div>
           </div>
         </div>
@@ -465,188 +591,187 @@
     </section>
 
     <!-- PROPIEDADES DESTACADAS -->
-<section id="featured-properties">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="mb-4 text-center col-md-12">
-        <h2 class="title">
-          Propiedades<br />
-          <span class="highlight">Destacadas</span><br />
-        </h2>
-      </div>
-
-      <!-- Propiedad 1 -->
-      <div class="mb-4 col-md-6">
-        <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
-          <div class="imagen-propiedad position-relative">
-            <img src="assets/chalet-venta-perleta-maitino-perleta_24801_md.jpg" class="img-fluid" />
-            <div class="icono-favorito position-absolute">
-              <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
-            </div>
-            <div class="ref-propiedad position-absolute">REF: CH-267</div>
-          </div>
-
-          <div class="info-propiedad row">
-            <!-- Columna izquierda: type, modality, location, características en móvil -->
-            <div class="col-12 col-md-6">
-              <div class="info-border">
-                <p class="type">Chalet</p>
-                <p class="modality">Venta</p>
-                <p class="location">Perleta · Maitino-Perleta</p>
-
-                <!-- Características móviles -->
-                <ul class="caracteristicas d-md-none mb-2">
-                  <li><strong>450</strong> m²</li>
-                  <li><strong>3.014</strong> m²</li>
-                  <li><strong>5</strong> Hab</li>
-                  <li><strong>3</strong> Baños</li>
-                  <li><strong>Piscina</strong></li>
-                </ul>
-              </div>
-              <p class="price">525.000 €</p>
-            </div>
-
-            <!-- Columna derecha: características en escritorio -->
-            <div class="col-md-6 d-none d-md-block">
-              <ul class="caracteristicas mb-0">
-                <li><strong>450</strong> m²</li>
-                <li><strong>3.014</strong> m²</li>
-                <li><strong>5</strong> Hab</li>
-                <li><strong>3</strong> Baños</li>
-                <li><strong>Piscina</strong></li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Propiedad 2 -->
-      <div class="mb-4 col-md-6">
-        <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
-          <div class="imagen-propiedad position-relative">
-            <img src="assets/piso-venta-elche-centro_25573_md.jpg" class="img-fluid" />
-            <div class="icono-favorito position-absolute">
-              <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
-            </div>
-            <div class="ref-propiedad position-absolute">REF: P-1429</div>
-          </div>
-
-          <div class="info-propiedad row">
-            <div class="col-12 col-md-6">
-              <div class="info-border">
-                <p class="type">Piso</p>
-                <p class="modality">Venta</p>
-                <p class="location">Elche · Centro</p>
-                <ul class="caracteristicas d-md-none mb-2">
-                  <li><strong>222</strong> m²</li>
-                  <li><strong>4</strong> Hab</li>
-                  <li><strong>Garaje</strong></li>
-                </ul>
-              </div>
-              <p class="price">269.999 €</p>
-            </div>
-            <div class="col-md-6 d-none d-md-block">
-              <ul class="caracteristicas mb-0">
-                <li><strong>222</strong> m²</li>
-                <li><strong>4</strong> Hab</li>
-                <li><strong>Garaje</strong></li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Propiedad 3 -->
-      <div class="mb-4 col-md-6">
-        <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
-          <div class="imagen-propiedad position-relative">
-            <img src="assets/chalet-venta-elche-pedanias-perleta_26754_md.jpg" class="img-fluid" />
-            <div class="icono-favorito position-absolute">
-              <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
-            </div>
-            <div class="ref-propiedad position-absolute">REF: CH-272</div>
-          </div>
-
-          <div class="info-propiedad row">
-            <div class="col-12 col-md-6">
-              <div class="info-border">
-                <p class="type">Chalet</p>
-                <p class="modality">Venta</p>
-                <p class="location">Elche Pedanias · Perleta</p>
-                <ul class="caracteristicas d-md-none mb-2">
-                  <li><strong>436</strong> m²</li>
-                  <li><strong>4.500</strong> m²</li>
-                  <li><strong>6</strong> Hab</li>
-                  <li><strong>4</strong> Baños</li>
-                  <li><strong>Piscina</strong></li>
-                  <li><strong>Garaje</strong></li>
-                </ul>
-              </div>
-              <p class="price">599.000 €</p>
-            </div>
-            <div class="col-md-6 d-none d-md-block">
-              <ul class="caracteristicas mb-0">
-                <li><strong>436</strong> m²</li>
-                <li><strong>4.500</strong> m²</li>
-                <li><strong>6</strong> Hab</li>
-                <li><strong>4</strong> Baños</li>
-                <li><strong>Piscina</strong></li>
-                <li><strong>Garaje</strong></li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Propiedad 4 -->
-      <div class="mb-4 col-md-6">
-        <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
-          <div class="imagen-propiedad position-relative">
-            <img src="assets/piso-venta-elche-centro_26573_md.jpg" class="img-fluid" />
-            <div class="icono-favorito position-absolute">
-              <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
-            </div>
-            <div class="ref-propiedad position-absolute">REF: P-223</div>
-          </div>
-
-          <div class="info-propiedad row">
-            <div class="col-12 col-md-6">
-              <div class="info-border">
-                <p class="type">Piso</p>
-                <p class="modality">Venta</p>
-                <p class="location">Elche · Centro</p>
-                <ul class="caracteristicas d-md-none mb-2">
-                  <li><strong>140</strong> m²</li>
-                  <li><strong>4</strong> Hab</li>
-                  <li><strong>2</strong> Baños</li>
-                </ul>
-              </div>
-              <p class="price">320.000 €</p>
-            </div>
-            <div class="col-md-6 d-none d-md-block">
-              <ul class="caracteristicas mb-0">
-                <li><strong>140</strong> m²</li>
-                <li><strong>4</strong> Hab</li>
-                <li><strong>2</strong> Baños</li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Ver todas las propiedades -->
+    <section id="featured-properties">
       <div class="container">
-        <div class="mt-5 mb-5 all-properties d-flex justify-content-center align-items-center">
-          <a href="#" class="text-white d-flex align-items-center text-decoration-none">
-            <p class="mb-0 me-3">Ver todas las <br />propiedades</p>
-            <img src="assets/Icon feather-plus-circle.svg" class="img-fluid" alt="Más propiedades" />
-          </a>
+        <div class="row justify-content-center">
+          <div class="mb-4 text-center col-md-12">
+            <h2 class="title">
+              Propiedades<br />
+              <span class="highlight">Destacadas</span><br />
+            </h2>
+          </div>
+
+          <!-- Propiedad 1 -->
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/chalet-venta-perleta-maitino-perleta_24801_md.jpg" class="img-fluid" />
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+                <div class="ref-propiedad position-absolute">REF: CH-267</div>
+              </div>
+
+              <div class="info-propiedad row">
+                <!-- Columna izquierda: type, modality, location, características en móvil -->
+                <div class="col-12 col-md-6">
+                  <div class="info-border">
+                    <p class="type">Chalet</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Perleta · Maitino-Perleta</p>
+
+                    <!-- Características móviles -->
+                    <ul class="caracteristicas d-md-none mb-2">
+                      <li><strong>450</strong> m²</li>
+                      <li><strong>3.014</strong> m²</li>
+                      <li><strong>5</strong> Hab</li>
+                      <li><strong>3</strong> Baños</li>
+                      <li><strong>Piscina</strong></li>
+                    </ul>
+                  </div>
+                  <p class="price">525.000 €</p>
+                </div>
+
+                <!-- Columna derecha: características en escritorio -->
+                <div class="col-md-6 d-none d-md-block">
+                  <ul class="caracteristicas mb-0">
+                    <li><strong>450</strong> m²</li>
+                    <li><strong>3.014</strong> m²</li>
+                    <li><strong>5</strong> Hab</li>
+                    <li><strong>3</strong> Baños</li>
+                    <li><strong>Piscina</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Propiedad 2 -->
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/piso-venta-elche-centro_25573_md.jpg" class="img-fluid" />
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+                <div class="ref-propiedad position-absolute">REF: P-1429</div>
+              </div>
+
+              <div class="info-propiedad row">
+                <div class="col-12 col-md-6">
+                  <div class="info-border">
+                    <p class="type">Piso</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Elche · Centro</p>
+                    <ul class="caracteristicas d-md-none mb-2">
+                      <li><strong>222</strong> m²</li>
+                      <li><strong>4</strong> Hab</li>
+                      <li><strong>Garaje</strong></li>
+                    </ul>
+                  </div>
+                  <p class="price">269.999 €</p>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                  <ul class="caracteristicas mb-0">
+                    <li><strong>222</strong> m²</li>
+                    <li><strong>4</strong> Hab</li>
+                    <li><strong>Garaje</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Propiedad 3 -->
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/chalet-venta-elche-pedanias-perleta_26754_md.jpg" class="img-fluid" />
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+                <div class="ref-propiedad position-absolute">REF: CH-272</div>
+              </div>
+
+              <div class="info-propiedad row">
+                <div class="col-12 col-md-6">
+                  <div class="info-border">
+                    <p class="type">Chalet</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Elche Pedanias · Perleta</p>
+                    <ul class="caracteristicas d-md-none mb-2">
+                      <li><strong>436</strong> m²</li>
+                      <li><strong>4.500</strong> m²</li>
+                      <li><strong>6</strong> Hab</li>
+                      <li><strong>4</strong> Baños</li>
+                      <li><strong>Piscina</strong></li>
+                      <li><strong>Garaje</strong></li>
+                    </ul>
+                  </div>
+                  <p class="price">599.000 €</p>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                  <ul class="caracteristicas mb-0">
+                    <li><strong>436</strong> m²</li>
+                    <li><strong>4.500</strong> m²</li>
+                    <li><strong>6</strong> Hab</li>
+                    <li><strong>4</strong> Baños</li>
+                    <li><strong>Piscina</strong></li>
+                    <li><strong>Garaje</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Propiedad 4 -->
+          <div class="mb-4 col-md-6">
+            <a href="/propiedad/EN-9/" class="text-white propiedad-destacada d-block text-decoration-none">
+              <div class="imagen-propiedad position-relative">
+                <img src="assets/piso-venta-elche-centro_26573_md.jpg" class="img-fluid" />
+                <div class="icono-favorito position-absolute">
+                  <img src="assets/Icon feather-heart-outline.svg" alt="Añadir a favoritos" />
+                </div>
+                <div class="ref-propiedad position-absolute">REF: P-223</div>
+              </div>
+
+              <div class="info-propiedad row">
+                <div class="col-12 col-md-6">
+                  <div class="info-border">
+                    <p class="type">Piso</p>
+                    <p class="modality">Venta</p>
+                    <p class="location">Elche · Centro</p>
+                    <ul class="caracteristicas d-md-none mb-2">
+                      <li><strong>140</strong> m²</li>
+                      <li><strong>4</strong> Hab</li>
+                      <li><strong>2</strong> Baños</li>
+                    </ul>
+                  </div>
+                  <p class="price">320.000 €</p>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                  <ul class="caracteristicas mb-0">
+                    <li><strong>140</strong> m²</li>
+                    <li><strong>4</strong> Hab</li>
+                    <li><strong>2</strong> Baños</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Ver todas las propiedades -->
+          <div class="container">
+            <div class="mt-5 mb-5 all-properties d-flex justify-content-center align-items-center">
+              <a href="#" class="text-white d-flex align-items-center text-decoration-none">
+                <p class="mb-0 me-3">Ver todas las <br />propiedades</p>
+                <img src="assets/Icon feather-plus-circle.svg" class="img-fluid" alt="Más propiedades" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- SOBRE NOSOTROS -->
     <section id="sobre-nosotros" class="py-5">
@@ -685,57 +810,55 @@
       </div>
     </section>
 
-<!-- ÚLTIMAS NOTICIAS -->
-<section id="last-news">
-  <div class="container">
-    <div class="row">
-      <!-- Contenedor principal -->
-      <div class="d-flex flex-column flex-lg-row justify-content-center text-center text-lg-start w-100 align-items-center align-items-lg-end">
-
-        <!-- Texto vertical / horizontal -->
-        <div class="col-12 col-lg-1 col-xl-2 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-start">
-          <p class="vertical-text mb-0">
-            Últimas<br />
-            <strong>Noticias</strong>
-          </p>
-        </div>
-
-        <!-- Icono + -->
-        <div class="col-12 col-lg-2 px-lg-5 px-xl-4 mb-3 mb-lg-0 d-flex justify-content-center justify-content-xl-start">
-          <img src="assets/Icon feather-plus-2-circle.svg" class="img-fluid" />
-        </div>
-
-        <!-- Cards -->
-        <div class="col-12 col-lg-9">
-          <div class="row">
-            <div class="col-12 col-md-6 mb-4 card">
-              <div class="image">
-                <img src="assets/last-news_1.jpg" class="img-fluid" alt="Last News 1" />
-              </div>
-              <div class="text">
-                <p class="date">27 jun 2025</p>
-                <p class="title">
-                  ¿Cuánto te cuesta poner tu inmueble a un precio por encima del mercado? Te lo decimos con datos, no con suposiciones
-                </p>
-              </div>
+    <!-- ÚLTIMAS NOTICIAS -->
+    <section id="last-news">
+      <div class="container">
+        <div class="row">
+          <!-- Contenedor principal -->
+          <div class="d-flex flex-column flex-lg-row justify-content-center text-center text-lg-start w-100 align-items-center align-items-lg-end">
+            <!-- Texto vertical / horizontal -->
+            <div class="col-12 col-lg-1 col-xl-2 mb-3 mb-lg-0 d-flex justify-content-center justify-content-lg-start">
+              <p class="vertical-text mb-0">
+                Últimas<br />
+                <strong>Noticias</strong>
+              </p>
             </div>
 
-            <div class="col-12 col-md-6 mb-4 card">
-              <div class="image">
-                <img src="assets/last-news_2.jpg" class="img-fluid" alt="Last News 2" />
-              </div>
-              <div class="text">
-                <p class="date">27 jun 2025</p>
-                <p class="title">Cómo Vender Tu Inmueble sin Intermediarios y Evitar las Llamadas de Agencias.</p>
+            <!-- Icono + -->
+            <div class="col-12 col-lg-2 px-lg-5 px-xl-4 mb-3 mb-lg-0 d-flex justify-content-center justify-content-xl-start">
+              <img src="assets/Icon feather-plus-2-circle.svg" class="img-fluid" />
+            </div>
+
+            <!-- Cards -->
+            <div class="col-12 col-lg-9">
+              <div class="row">
+                <div class="col-12 col-md-6 mb-4 card">
+                  <div class="image">
+                    <img src="assets/last-news_1.jpg" class="img-fluid" alt="Last News 1" />
+                  </div>
+                  <div class="text">
+                    <p class="date">27 jun 2025</p>
+                    <p class="title">
+                      ¿Cuánto te cuesta poner tu inmueble a un precio por encima del mercado? Te lo decimos con datos, no con suposiciones
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-4 card">
+                  <div class="image">
+                    <img src="assets/last-news_2.jpg" class="img-fluid" alt="Last News 2" />
+                  </div>
+                  <div class="text">
+                    <p class="date">27 jun 2025</p>
+                    <p class="title">Cómo Vender Tu Inmueble sin Intermediarios y Evitar las Llamadas de Agencias.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="block-section">
       <img src="assets/final_background.jpg" class="img-parallax" alt="Parallax" />
