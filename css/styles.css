@@ -1362,6 +1362,28 @@ header {
   background-color: var(--color-primary);
 }
 
+/* ===================== FOOTER VERTICAL RESPONSIVO ===================== */
+@media (max-width: 767px) {
+  #footer-vertical .bottom-menu {
+    flex-direction: column; /* menú vertical en móviles */
+    align-items: center;
+    gap: 10px; /* separa los items */
+  }
+
+  #footer-vertical .bottom-menu li {
+    margin: 5px 0; /* espacio vertical entre elementos */
+  }
+
+  #footer-vertical .details {
+    font-size: 24px; /* reduce tamaño en móviles */
+  }
+
+  #footer-vertical {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}
+
 /* ===================== FOOTER ===================== */
 #footer-legal {
   background-color: var(--color-primary);
